@@ -54,10 +54,10 @@ module.exports.run = async (bot, message, args) => {
             message.channel.send("Er is iets fout gelopen.");
         });
 
-    }).catch(err => {
-        message.channel.send("Er is iets fout gelopen.");
-    });
-
+    })
+        .catch(err => {
+            message.channel.send("Er is iets fout gelopen.");
+        });
 }
 
 module.exports.help = {

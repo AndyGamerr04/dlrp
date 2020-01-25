@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -9,11 +10,10 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setTitle("💡Idee aanvraag")
+        .setTitle("Idee aanvraag van ", message.author)
         .setColor("#00FF00")
-        .addField("**Idee:** ", idee)
-        .setTimestamp()
-        .setFooter(message.author);
+        .setDescription(`${announcer}`)
+        .setFooter(`${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");

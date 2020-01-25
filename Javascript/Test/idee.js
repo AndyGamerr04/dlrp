@@ -2,6 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+    message.delete();
+
     var idee = args.join(" ");
 
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");

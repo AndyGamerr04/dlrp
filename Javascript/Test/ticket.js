@@ -2,21 +2,16 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    // ID van de categorie van de tickets.
-    const categoryId = "650098328318771271";
+    const categoryId = "670591950834892826";
 
-    // Verkrijg Gebruikersnaam
     var userName = message.author.username;
-    // Verkrijg discriminator
+
     var userDiscriminator = message.author.discriminator;
 
-    // Als ticket al gemaakt is
     var bool = false;
 
-    // Kijk na als ticket al gemaakt is.
     message.guild.channels.forEach((channel) => {
 
-        // Als ticket is gemaakt, zend bericht.
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
 
             message.channel.send("Je hebt al een ticket aangemaakt");
@@ -27,7 +22,6 @@ module.exports.run = async (bot, message, args) => {
 
     });
 
-    // Als ticket return code.
     if (bool == true) return;
 
     var embedCreateTicket = new discord.RichEmbed()
@@ -36,10 +30,9 @@ module.exports.run = async (bot, message, args) => {
 
     message.channel.send(embedCreateTicket);
 
-    // Maak kanaal en zet in juiste categorie.
-    message.guild.createChannel(userName + "-" + userDiscriminator, "text").then((createdChan) => { // Maak kanaal
+    message.guild.createChannel(userName + "-" + userDiscriminator, "text").then((createdChan) => {
 
-        createdChan.setParent(categoryId).then((settedParent) => { // Zet kanaal in category.
+        createdChan.setParent(categoryId).then((settedParent) => {
 
             // Zet perms voor iedereen
             settedParent.overwritePermissions(message.guild.roles.find('name', "@everyone"), { "READ_MESSAGES": false });
@@ -68,6 +61,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "ticket",
-    description: "Maak een ticket aan"
+    name: "ticket"
 }

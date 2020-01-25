@@ -62,6 +62,25 @@ fs.readdir("./Javascript/Private/", (err, files) => {
   });
 });
 
+//Server
+fs.readdir("./Javascript/Server/", (err, files) => {
+  if (err) console.log(err);
+
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+  if (jsFiles.length <= 0) {
+    console.log("script not found!");
+    return;
+  }
+
+  jsFiles.forEach((f, i) => {
+    var fileGet = require(`./Javascript/Server/${f}`);
+    console.log(`${f} loaded!`);
+
+    bot.commands.set(fileGet.help.name, fileGet);
+  });
+});
+
 //Test Commands
 fs.readdir("./Javascript/Test/", (err, files) => {
   if (err) console.log(err);

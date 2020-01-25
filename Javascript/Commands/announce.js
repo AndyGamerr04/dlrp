@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`**Dutch Life Roleplay Announcement | ${user}**\n\n${announce}`)
         .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
-    var announceChannel = message.guild.channels.find(`name`, "💡announce-aanvraag");
+    var announceChannel = message.guild.channels.find(`name`, "📍announcements");
     if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     announceChannel.send(announceEmbed).then(embedMessage => {

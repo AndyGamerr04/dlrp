@@ -1,14 +1,12 @@
 const discord = require("discord.js");
-const botCofig = require(".../botconfig.json");
 const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
-  var prefix = botCofig.prefix;
 
   if (!args[0]) {
     var err = new discord.RichEmbed()
       .setColor("D50000")
-      .addField("**Error**", `${prefix}report @Username reason`);
+      .addField("**Error**", `report @Username reason`);
 
     return message.channel.send(err).then(msg => msg.delete(8000));
   }
@@ -19,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
   var reason = args.join(" ").slice(22);
 
-  if (!reason) return message.channel.send(`${prefix}report @Username reason`);
+  if (!reason) return message.channel.send(`report @Username reason`);
 
   var reportEmbed = new discord.RichEmbed()
 

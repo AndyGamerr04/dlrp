@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
         .setColor("#45fc03")
-        .setDescription(`**Idee aanvraag van** ${user}**\n\n${idee}\n`)
-        .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, user.avatarURL)
+        .setDescription(`**Idee aanvraag van ${user}** 💡\n\n${idee}\n`)
+        .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");

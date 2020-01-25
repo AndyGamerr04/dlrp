@@ -5,6 +5,8 @@ const active = new Map();
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
+//Commands
+
 fs.readdir("./Javascript/", (err, files) => {
   if (err) console.log(err);
 
@@ -14,7 +16,6 @@ fs.readdir("./Javascript/", (err, files) => {
     console.log("script not found!");
     return;
   }
-
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Javascript/${f}`);
     console.log(`${f} loaded!`);
@@ -22,6 +23,9 @@ fs.readdir("./Javascript/", (err, files) => {
     bot.commands.set(fileGet.help.name, fileGet);
   });
 });
+
+//
+
 fs.readdir("./Javascript/Fivem/", (err, files) => {
   if (err) console.log(err);
 
@@ -39,6 +43,8 @@ fs.readdir("./Javascript/Fivem/", (err, files) => {
     bot.commands.set(fileGet.help.name, fileGet);
   });
 });
+
+//
 
 fs.readdir("./Javascript/server/", (err, files) => {
   if (err) console.log(err);
@@ -58,6 +64,8 @@ fs.readdir("./Javascript/server/", (err, files) => {
   });
 });
 
+//
+
 fs.readdir("./Javascript/Commands/", (err, files) => {
   if (err) console.log(err);
 
@@ -76,11 +84,15 @@ fs.readdir("./Javascript/Commands/", (err, files) => {
   });
 });
 
+//
+
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
-  // bot.user.setActivity("Visual Studio Code", { type: "Playing" });
+  bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
 });
+
+
 
 bot.on("message", async message => {
   if (message.author.bot) return;

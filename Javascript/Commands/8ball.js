@@ -2,10 +2,10 @@
 const Discord = module.require('discord.js');
 
 var fortunes = [
-  "Yes",
-  "No",
-  "Maybe",
-  "Dont know, try again"
+  "Ja",
+  "Nee",
+  "Kan zijn",
+  "Weet niet, probeer het opnieuw"
 ];
 
 
@@ -14,8 +14,8 @@ module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
 
     var err = new Discord.RichEmbed()
-    .setColor("D50000")
-    .addField("**Error**", "*Please Enter A Question You Would Like Answered*");
+      .setColor("D50000")
+      .addField("**Error**", "*Voer een vraag in die u graag wilt beantwoorden*");
 
     return message.channel.send(err).then(msg => msg.delete(4000));
   }
@@ -25,20 +25,21 @@ module.exports.run = async (bot, message, args) => {
 
     var ball = new Discord.RichEmbed()
 
-    .setColor("950ceb")
-    .setAuthor(fortunes[Math.floor(Math.random() * fortunes.length)]);   
-    
+      .setColor("950ceb")
+      .setAuthor(fortunes[Math.floor(Math.random() * fortunes.length)]);
+
     message.channel.send(ball)
 
-  }  else { 
+  } else {
 
     var errb = new Discord.RichEmbed()
 
-    .setColor("D50000")
-    .addField("**Error**", "*I Wasnt Able To Read That :(*");
-    
+      .setColor("D50000")
+      .addField("**Error**", "*Ik kon dat niet lezen :(*");
+
     message.channel.send(errb).then(msg => msg.delete(4000));
-}}
+  }
+}
 
 module.exports.help = {
   name: "8ball"

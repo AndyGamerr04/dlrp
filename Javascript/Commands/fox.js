@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const superAgent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    var embed = new discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
         .setColor("950ceb")
         .setTitle("Foxy :fox:")
         .setImage(fox.body.image);

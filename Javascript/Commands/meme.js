@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const superAgent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     meme = await superAgent
         .get("https://some-random-api.ml/meme");
 
-    var embed = new discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
         .setColor("950ceb")
         .setTitle(":regional_indicator_m: :regional_indicator_e: :regional_indicator_m: :regional_indicator_e: ")
         .setImage(meme.body.image);

@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const superAgent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
             .get("https://random.dog/woof.json");
     }
 
-    var embed = new discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
         .setColor("950ceb")
         .setTitle("Daggu :dog:")
         .setImage(dog.body.url);

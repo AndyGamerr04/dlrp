@@ -3,6 +3,9 @@ const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
 
+    if (!message.member.hasPermission("MANAGE_MESSAGES"))
+        return message.reply("**You don't have permission.**");
+
     message.delete();
 
     var announce = args.join(" ");

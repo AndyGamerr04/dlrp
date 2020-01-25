@@ -43,25 +43,6 @@ fs.readdir("./Javascript/Commands/", (err, files) => {
   });
 });
 
-//Test Commands
-fs.readdir("./Javascript/Test/", (err, files) => {
-  if (err) console.log(err);
-
-  var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-  if (jsFiles.length <= 0) {
-    console.log("script not found!");
-    return;
-  }
-
-  jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/Test/${f}`);
-    console.log(`${f} loaded!`);
-
-    bot.commands.set(fileGet.help.name, fileGet);
-  });
-});
-
 //Private
 fs.readdir("./Javascript/Private/", (err, files) => {
   if (err) console.log(err);
@@ -75,6 +56,25 @@ fs.readdir("./Javascript/Private/", (err, files) => {
 
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Javascript/Private/${f}`);
+    console.log(`${f} loaded!`);
+
+    bot.commands.set(fileGet.help.name, fileGet);
+  });
+});
+
+//Test Commands
+fs.readdir("./Javascript/Test/", (err, files) => {
+  if (err) console.log(err);
+
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+  if (jsFiles.length <= 0) {
+    console.log("script not found!");
+    return;
+  }
+
+  jsFiles.forEach((f, i) => {
+    var fileGet = require(`./Javascript/Test/${f}`);
     console.log(`${f} loaded!`);
 
     bot.commands.set(fileGet.help.name, fileGet);

@@ -4,15 +4,15 @@ module.exports.run = async (bot, message, args) => {
 
     const categoryId = "670591950834892826";
 
-    if (message.channel.parentID == categoryId) {
+    //if (message.channel.parentID == categoryId) {
 
-        message.channel.delete();
+    //  message.channel.delete();
 
-    } else {
+    //} else {
 
-        message.channel.send("Gelieve dit commando in een ticket kanaal te doen.");
+    //message.channel.send("Gelieve dit commando in een ticket kanaal te doen.");
 
-    }
+    //}
 
 }
 

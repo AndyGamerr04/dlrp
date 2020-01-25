@@ -9,11 +9,11 @@ module.exports.run = async (bot, message, args) => {
 
     var user = message.author;
 
-    if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
+    if (!idee) return message.channel.send("!idee (idee + link)");
 
     var ideeEmbed = new discord.RichEmbed()
         .setColor("#45fc03")
-        .setDescription(`**Idee aanvraag van ${user}** 💡\n\n${idee}\n`)
+        .setDescription(`💡 **Idee aanvraag van ${user}**\n\n${idee}`)
         .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");

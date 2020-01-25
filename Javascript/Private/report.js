@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
     )
     .setColor("#ff0000");
 
-  var reportChannel = message.guild.channels.find("name", "report");
+  var reportChannel = message.guild.channels.find("name", "📁report-log");
 
   if (!reportChannel) return message.channel.send(`Channel Not Found`);
 

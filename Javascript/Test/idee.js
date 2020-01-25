@@ -7,10 +7,12 @@ module.exports.run = async (bot, message, args) => {
 
     var idee = args.join(" ");
 
+    var user = message.author;
+
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setTitle("Idee aanvraag van ", message.author)
+        .setAuthor(`Idee aanvraag van ${user}`, 'https://i.imgur.com/wSTFkRM.png')
         .setColor("#45fc03")
         .setDescription(`${idee}`)
         .setFooter(`${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)

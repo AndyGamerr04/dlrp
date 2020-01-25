@@ -32,15 +32,11 @@ module.exports.run = async (bot, message, args) => {
 
         createdChan.setParent(categoryId).then((settedParent) => {
 
-            // Zet perms voor iedereen
             settedParent.overwritePermissions(message.guild.roles.find('name', "@everyone"), { "READ_MESSAGES": false });
-            // Zet perms voor de gebruiker die ticket heeft aangemaakt.
             settedParent.overwritePermissions(message.author, {
-
                 "READ_MESSAGES": true, "SEND_MESSAGES": true,
                 "ATTACH_FILES": true, "CONNECT": true,
                 "CREATE_INSTANT_INVITE": false, "ADD_REACTIONS": true
-
             });
 
             var embedParent = new discord.RichEmbed()
@@ -51,13 +47,9 @@ module.exports.run = async (bot, message, args) => {
         }).catch(err => {
             message.channel.send("Er is iets fout gelopen.");
         });
-
     })
-        .catch(err => {
-            message.channel.send("Er is iets fout gelopen.");
-        });
 }
 
 module.exports.help = {
-    name: "ticket"
+    name: "support"
 }

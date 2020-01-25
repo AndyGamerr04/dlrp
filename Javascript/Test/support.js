@@ -17,13 +17,11 @@ module.exports.run = async (bot, message, args) => {
             bool = true;
 
         }
-
     });
 
     if (bool == true) return;
 
     var embedCreateTicket = new discord.RichEmbed()
-        .setTitle("Hoi, " + message.author.username)
         .setFooter("Support kanaal wordt aangemaakt");
 
     message.channel.send(embedCreateTicket);
@@ -40,7 +38,6 @@ module.exports.run = async (bot, message, args) => {
             });
 
             var embedParent = new discord.RichEmbed()
-                .setTitle("Hoi, " + message.author.username.toString())
                 .setDescription("Zet hier je vraag/bericht");
 
             settedParent.send(embedParent);

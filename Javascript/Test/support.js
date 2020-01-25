@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    var idp = user.username;
+    var idp = message.author.username;
 
     var user = message.author;
 
@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
     var embedCreateTicket = new discord.RichEmbed()
         .setDescription(`Support kanaal wordt aangemaakt ${user}`);
 
-    message.channel.send(embedCreateTicket).then(msg => msg.delete(5000));
+    message.channel.send(embedCreateTicket).then(msg => msg.delete(9000));
 
     message.guild.createChannel(idp, "text").then((createdChan) => {
 

@@ -11,8 +11,8 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
         .setTitle("Idee aanvraag van ", message.author)
-        .setColor("#00FF00")
-        .setDescription(`${announcer}`)
+        .setColor("#45fc03")
+        .setDescription(`${idee}`)
         .setFooter(`${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");

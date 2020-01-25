@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     return message.channel.send(err).then(msg => msg.delete(2000));
   }
 
-  message.channel.bulkDelete(args[0]).then(() => {});
+  message.channel.bulkDelete(args[0]).then(() => { });
 };
 
 module.exports.help = {

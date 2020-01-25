@@ -4,17 +4,13 @@ module.exports.run = async (bot, message, args) => {
 
     const categoryId = "670591950834892826";
 
-    var userName = message.author.username;
-
-    var user = message.author;
-
-    var userDiscriminator = message.id;
+    var idp = message.id;
 
     var bool = false;
 
     message.guild.channels.forEach((channel) => {
 
-        if (channel.name == userDiscriminator) {
+        if (channel.name == idp) {
 
             message.channel.send("Je hebt al een ticket aangemaakt");
 
@@ -32,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.channel.send(embedCreateTicket);
 
-    message.guild.createChannel(userName, "text").then((createdChan) => {
+    message.guild.createChannel(idp, "text").then((createdChan) => {
 
         createdChan.setParent(categoryId).then((settedParent) => {
 

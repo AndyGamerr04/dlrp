@@ -4,6 +4,8 @@ module.exports.run = async (bot, message, args) => {
 
     const categoryId = "670591950834892826";
 
+    message.delete();
+
     var idp = message.id;
 
     var bool = false;
@@ -22,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     if (bool == true) return;
 
     var embedCreateTicket = new discord.RichEmbed()
-        .setFooter("Support kanaal wordt aangemaakt");
+        .setAuthor("Support kanaal wordt aangemaakt");
 
     message.channel.send(embedCreateTicket);
 
@@ -38,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
             });
 
             var embedParent = new discord.RichEmbed()
-                .setDescription("Zet hier je vraag/bericht");
+                .setAuthor("Zet hier je vraag/bericht");
 
             settedParent.send(embedParent);
         }).catch(err => {

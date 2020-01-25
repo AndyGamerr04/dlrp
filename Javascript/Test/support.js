@@ -8,6 +8,8 @@ module.exports.run = async (bot, message, args) => {
 
     var idp = message.id;
 
+    var user = message.author;
+
     var bool = false;
 
     message.guild.channels.forEach((channel) => {
@@ -24,9 +26,9 @@ module.exports.run = async (bot, message, args) => {
     if (bool == true) return;
 
     var embedCreateTicket = new discord.RichEmbed()
-        .setAuthor("Support kanaal wordt aangemaakt");
+        .setAuthor(`Support kanaal wordt aangemaakt ${user}`);
 
-    message.channel.send(embedCreateTicket);
+    message.channel.send(embedCreateTicket).then(msg => msg.delete(10000));
 
     message.guild.createChannel(idp, "text").then((createdChan) => {
 

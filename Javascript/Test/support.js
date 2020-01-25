@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
     if (bool == true) return;
 
     var embedCreateTicket = new discord.RichEmbed()
-        .setAuthor(`Support kanaal wordt aangemaakt ${user}`);
+        .setDescription(`Support kanaal wordt aangemaakt ${user}`);
 
     message.channel.send(embedCreateTicket).then(msg => msg.delete(10000));
 

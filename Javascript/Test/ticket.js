@@ -6,7 +6,9 @@ module.exports.run = async (bot, message, args) => {
 
     var userName = message.author.username;
 
-    var userDiscriminator = message.author.discriminator;
+    var user = message.author;
+
+    var userDiscriminator = message.id;
 
     var bool = false;
 

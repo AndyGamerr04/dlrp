@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const discord = require("discord.js");
 const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    const botEmbed = new Discord.RichEmbed()
+    const botEmbed = new discord.RichEmbed()
         .setThumbnail(user.avatarURL)
         .setColor("950ceb")
         .addField("**Name**", `${user.username}#${user.discriminator}`, true)
@@ -21,5 +21,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "pinfo"
+    name: "ik"
 }

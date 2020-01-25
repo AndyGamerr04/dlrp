@@ -24,26 +24,7 @@ fs.readdir("./Javascript/", (err, files) => {
   });
 });
 
-//Commands NEW
-fs.readdir("./Javascript/Command", (err, files) => {
-  if (err) console.log(err);
-
-  var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-  if (jsFiles.length <= 0) {
-    console.log("script not found!");
-    return;
-  }
-
-  jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/Command/${f}`);
-    console.log(`${f} loaded!`);
-
-    bot.commands.set(fileGet.help.name, fileGet);
-  });
-});
-
-//Commands OLD
+//Commands
 fs.readdir("./Javascript/Commands/", (err, files) => {
   if (err) console.log(err);
 

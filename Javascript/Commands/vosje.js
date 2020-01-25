@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const discord = require("discord.js");
 const superAgent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
@@ -8,9 +8,9 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    var embed = new Discord.RichEmbed()
+    var embed = new discord.RichEmbed()
         .setColor("950ceb")
-        .setTitle("Foxy :fox:")
+        .setTitle("Vosje :fox:")
         .setImage(fox.body.image);
 
     message.channel.send(embed);
@@ -18,5 +18,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "fox"
+    name: "vosje"
 }

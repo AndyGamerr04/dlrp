@@ -43,8 +43,8 @@ fs.readdir("./Javascript/Commands/", (err, files) => {
   });
 });
 
-//Server 
-fs.readdir("./Javascript/server/", (err, files) => {
+//Test Commands
+fs.readdir("./Javascript/Test/", (err, files) => {
   if (err) console.log(err);
 
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
@@ -55,7 +55,26 @@ fs.readdir("./Javascript/server/", (err, files) => {
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/server/${f}`);
+    var fileGet = require(`./Javascript/Test/${f}`);
+    console.log(`${f} loaded!`);
+
+    bot.commands.set(fileGet.help.name, fileGet);
+  });
+});
+
+//Private
+fs.readdir("./Javascript/Private/", (err, files) => {
+  if (err) console.log(err);
+
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+  if (jsFiles.length <= 0) {
+    console.log("script not found!");
+    return;
+  }
+
+  jsFiles.forEach((f, i) => {
+    var fileGet = require(`./Javascript/Private/${f}`);
     console.log(`${f} loaded!`);
 
     bot.commands.set(fileGet.help.name, fileGet);
@@ -69,6 +88,7 @@ bot.on("ready", async () => {
   bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
 });
 
+//main
 bot.on("message", async message => {
   if (message.author.bot) return;
 
@@ -101,4 +121,5 @@ bot.on("message", async message => {
   if (command) commands.run(bot, message, arguments, options);
 });
 
+//Token
 bot.login(process.env.token);

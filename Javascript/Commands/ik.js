@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("**ID**", user.id, true)
         .addBlankField()
         .addField("**CreatedAt**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-        .addField("**JoindAt**", `${moment.utc(user.joindAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**JoindAt**", `${moment.utc(user.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
 
     return message.channel.send(botEmbed).then(msg => msg.delete(20000));
 

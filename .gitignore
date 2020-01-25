@@ -1,4 +1,3 @@
 node_modules/
+Private/
 package-lock.json
-botconfig.json
-prefixes.json

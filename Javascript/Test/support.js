@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
             });
 
             var embedParent = new discord.RichEmbed()
-                .setAuthor("Zet hier je vraag/bericht");
+                .setDescription("Zet hier je vraag/bericht");
 
             settedParent.send(embedParent);
         }).catch(err => {

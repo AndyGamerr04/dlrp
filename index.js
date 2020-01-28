@@ -85,7 +85,7 @@ fs.readdir("./Javascript/Server/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setActivity("Antilliaans a swa", { type: "Playing" });
+  //bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
 });
 
 //main
@@ -121,5 +121,4 @@ bot.on("message", async message => {
   if (command) commands.run(bot, message, arguments, options);
 });
 
-//Token
 bot.login(process.env.token);

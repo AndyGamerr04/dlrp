@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  let version = "2.0";
 
   message.delete();
 

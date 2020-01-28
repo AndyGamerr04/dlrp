@@ -92,8 +92,6 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
   if (message.author.bot) return;
 
-  if (message.content.indexOf(prefixes) !== 0) return;
-
   if (message.channel.type === "dm") return;
 
   var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));

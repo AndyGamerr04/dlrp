@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (message, args) => {
+module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("MANAGE_MESSAGES")) {
     var perm = new Discord.RichEmbed()
       .setColor("0x333333")

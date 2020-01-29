@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const moment = require("moment");
 
-module.exports.run = async (message) => {
+module.exports.run = async (bot, message, args) => {
 
     const user = message.mentions.users.first() || message.author;
 

@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const moment = require("moment");
 
-module.exports.run = async (message, args) => {
+module.exports.run = async (bot, message, args) => {
 
   if (!args[0]) {
     var err = new discord.RichEmbed()

@@ -17,7 +17,7 @@ var Responses = [
     //"You better not hope so"
 ];
 
-module.exports.run = async (message, args) => {
+module.exports.run = async (bot, message, args) => {
 
     if (!args[0]) {
 

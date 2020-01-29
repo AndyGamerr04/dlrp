@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setTitle("Vosje :fox:")
+        .setTitle("**Vosje** :fox:")
         .setImage(fox.body.image);
 
     message.channel.send(embed);

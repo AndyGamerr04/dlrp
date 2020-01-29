@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("**Hentai**")
         .setImage(hen.body.message);
 
-    message.channel.send(embed).then(msg => msg.delete(5000));
+    message.channel.send(embed).then(msg => msg.delete(50000));
 
 }
 

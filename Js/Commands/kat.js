@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setTitle("kat :cat:")
+        .setTitle("**kat** :cat:")
         .setImage(cat.body.file);
 
     message.channel.send(embed);

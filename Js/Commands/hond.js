@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
-const botConfig = require("./botconfig.json");
+const botConfig = require("../../botconfig.json");
 
 var mainColor = botConfig.mainColor;
 

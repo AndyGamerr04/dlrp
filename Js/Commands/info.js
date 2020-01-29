@@ -18,16 +18,14 @@ module.exports.run = async (bot, message, args) => {
 
     "us-west": ":flag_us: U.S. West",
 
-    "eu-west": ":flag_eu: Western Europe",
-
   };
 
   message.delete();
 
   var serverEmbed = new discord.RichEmbed()
     .setColor(mainColor)
-    .addField("Owner", message.guild.owner, true)
     .addField("Region", region[message.guild.region], true)
+    .addField("Owner", message.guild.owner, true)
     .addField(
       "Verification Level",
       verifLevels[message.guild.verificationLevel],
@@ -46,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
     )
     .addField("Channels", message.guild.channels.size, true)
     .addField("Total Roles", message.guild.roles.size, true)
-    .addField("Bot Creator", "I'm A Fox #1518", true);
+    .addField("Bot Creator", "アンディ#2020", true);
   return message.channel.send(serverEmbed).then(msg => msg.delete(50000));
 };
 

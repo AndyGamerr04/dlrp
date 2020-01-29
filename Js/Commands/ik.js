@@ -15,8 +15,8 @@ module.exports.run = async (bot, message, args) => {
         .addField("**Name**", `${user.username}#${user.discriminator}`, true)
         .addField("**ID**", user.id, true)
         .addBlankField()
-        .addField("**JoindAt**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-        .addField("**CreatedAt**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
 
     return message.channel.send(botEmbed).then(msg => msg.delete(50000));
 

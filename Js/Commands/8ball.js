@@ -1,4 +1,6 @@
 const discord = module.require('discord.js');
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 var fortunes = [
   "Ja!",
@@ -21,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
   if (args[0]) {
 
     var ball = new discord.RichEmbed()
-      .setColor("950ceb")
+      .setColor(mainColor)
       .setAuthor(fortunes[Math.floor(Math.random() * fortunes.length)]);
 
     message.channel.send(ball)

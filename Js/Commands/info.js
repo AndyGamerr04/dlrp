@@ -1,4 +1,6 @@
 const discord = require("discord.js");
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -23,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
   message.delete();
 
   var serverEmbed = new discord.RichEmbed()
-    .setColor("#1f74df")
+    .setColor(mainColor)
     .addField("Owner", message.guild.owner, true)
     .addField("Region", region[message.guild.region], true)
     .addField(

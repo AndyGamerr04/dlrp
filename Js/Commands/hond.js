@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
 const botConfig = require("../../botconfig.json");
-
 var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {

@@ -1,5 +1,7 @@
 const discord = require("discord.js");
 const moment = require("moment");
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -9,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     const botEmbed = new discord.RichEmbed()
         .setThumbnail(user.avatarURL)
-        .setColor("950ceb")
+        .setColor(mainColor)
         .addField("**Name**", `${user.username}#${user.discriminator}`, true)
         .addField("**ID**", user.id, true)
         .addBlankField()

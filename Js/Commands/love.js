@@ -1,4 +1,6 @@
 const discord = module.require('discord.js');
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 var Responses = [
     "Ja!",
@@ -32,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
     if (args[0]) {
 
         var love = new discord.RichEmbed()
-            .setColor("1E88E5")
+            .setColor(mainColor)
             .setAuthor(Responses[Math.floor(Math.random() * Responses.length)]);
 
         message.channel.send(love)

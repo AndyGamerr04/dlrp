@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("MANAGE_MESSAGES")) {

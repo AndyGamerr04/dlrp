@@ -1,5 +1,7 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -14,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-        .setColor("950ceb")
+        .setColor(mainColor)
         .setTitle("kat :cat:")
         .setImage(cat.body.file);
 

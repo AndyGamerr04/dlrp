@@ -38,6 +38,23 @@ fs.readdir("./Js/Temp/", (err, files) => {
   });
 });
 
+fs.readdir("./Js/music/", (err, files) => {
+  if (err) console.log(err);
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+  if (jsFiles.length <= 0) {
+    console.log("script not found!");
+    return;
+  }
+
+  jsFiles.forEach((f, i) => {
+    var fileGet = require(`./Js/music/${f}`);
+
+    console.log(`${f} are now loaded`);
+
+    bot.commands.set(fileGet.help.name, fileGet);
+  });
+});
+
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);

@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const botConfig = require("../../botconfig.json");
 const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
@@ -13,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if (!announce) return message.channel.send("!announce (announce + link)");
 
     var announceEmbed = new discord.RichEmbed()
-        .setColor("#009eff")
+        .setColor(mainColor)
         .setDescription(`**Dutch Life Roleplay Announcement | @everyone **\n\n${announce}`)
         .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 

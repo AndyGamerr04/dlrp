@@ -18,17 +18,17 @@ module.exports.run = async (bot, message, args) => {
     var ana;
 
     ana = await superAgent
-        .get("https://nekobot.xyz/api/image?type=anal");
+        .get("https://nekos.life/api/v2/img/pussy");
 
     var embed = new discord.RichEmbed()
         .setColor("ef7f1b")
-        .setTitle("**RAPE** :underage:")
-        .setImage(ana.body.message);
+        .setTitle("**アンディ** :underage:")
+        .setImage(ana.body.url);
 
     message.channel.send(embed).then(msg => msg.delete(4000));
 
 }
 
 module.exports.help = {
-    name: "ass"
+    name: "andy"
 }

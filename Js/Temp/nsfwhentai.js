@@ -22,10 +22,10 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
         .setColor("ef7f1b")
-        .setTitle("**Hentai**:underage:")
+        .setTitle("**Hentai** :underage:")
         .setImage(ana.body.url);
 
-    message.channel.send(embed).then(msg => msg.delete(40000));
+    message.channel.send(embed).then(msg => msg.delete(4000));
 
 }
 

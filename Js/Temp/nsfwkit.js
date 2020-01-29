@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("**KIT** :underage:")
         .setImage(ana.body.message);
 
-    message.channel.send(embed).then(msg => msg.delete(40000));
+    message.channel.send(embed).then(msg => msg.delete(4000));
 
 }
 

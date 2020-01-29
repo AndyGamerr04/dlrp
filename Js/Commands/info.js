@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   var region = {
 
-    "eu": ":flag_eu: Central Europe",
+    "europe": ":flag_eu: Europe",
 
     "us-central": ":flag_us: U.S. Central",
 
@@ -47,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Channels", message.guild.channels.size, true)
     .addField("Total Roles", message.guild.roles.size, true)
     .addField("Bot Creator", "I'm A Fox #1518", true);
-  return message.channel.send(serverEmbed).then(msg => msg.delete(20000));
+  return message.channel.send(serverEmbed).then(msg => msg.delete(50000));
 };
 
 module.exports.help = {

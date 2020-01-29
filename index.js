@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./Js", (err, files) => {
+fs.readdir("./Js/", (err, files) => {
   if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
@@ -12,7 +12,7 @@ fs.readdir("./Js", (err, files) => {
     return;
   }
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Js${f}`);
+    var fileGet = require(`./Js/${f}`);
     console.log(`${f} are now loaded`);
     bot.commands.set(fileGet.help.name, fileGet);
   });

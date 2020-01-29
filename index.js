@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 const fs = require("fs");
-const active = new Map();
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
@@ -61,13 +60,7 @@ bot.on("message", async message => {
 
   var commands = bot.commands.get(command.slice(prefix.length));
 
-  //if (!message.content.startsWith(prefix)) return;
-
-  var options = {
-    active: active
-  };
-
-  if (command) commands.run(bot, message, arguments, options);
+  if (command) commands.run(bot, message, arguments);
 });
 
 bot.login(process.env.token);

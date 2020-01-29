@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (message) => {
 
     var cat;
 

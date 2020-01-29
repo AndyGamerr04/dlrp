@@ -7,7 +7,7 @@ var fortunes = [
   "Ik weet niet, probeer het opnieuw!"
 ];
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (message, args) => {
 
   if (!args[0]) {
 

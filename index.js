@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./Javascript/Commands/", (err, files) => {
+fs.readdir("./Js/Commands/", (err, files) => {
   if (err) console.log(err);
 
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
@@ -15,37 +15,25 @@ fs.readdir("./Javascript/Commands/", (err, files) => {
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/Commands/${f}`);
-    console.log(`${f} loaded!`);
+    var fileGet = require(`./Js/Commands/${f}`);
+    console.log(`${f} are now loaded`);
 
     bot.commands.set(fileGet.help.name, fileGet);
+
   });
-});
-fs.readdir("./Javascript/Server/", (err, files) => {
-  if (err) console.log(err);
 
-  var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-  if (jsFiles.length <= 0) {
-    console.log("script not found!");
-    return;
-  }
-
-  jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/Server/${f}`);
-    console.log(`${f} loaded!`);
-
-    bot.commands.set(fileGet.help.name, fileGet);
-  });
 });
 
 bot.on("ready", async () => {
+
   console.log(`${bot.user.username} is online!`);
 
-  //bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
+  bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
+
 });
 
 bot.on("message", async message => {
+
   if (message.author.bot) return;
 
   if (message.channel.type === "dm") return;
@@ -61,6 +49,7 @@ bot.on("message", async message => {
   var commands = bot.commands.get(command.slice(prefix.length));
 
   if (command) commands.run(bot, message, arguments);
+
 });
 
 bot.login(process.env.token);

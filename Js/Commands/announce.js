@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const moment = require("moment");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (message, args) => {
 
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
         return message.reply("**You don't have permission.**");

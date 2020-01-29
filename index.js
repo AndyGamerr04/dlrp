@@ -61,7 +61,7 @@ bot.on("message", async message => {
 
   var commands = bot.commands.get(command.slice(prefix.length));
 
-  if (!message.content.startsWith(prefix)) return;
+  //if (!message.content.startsWith(prefix)) return;
 
   var options = {
     active: active

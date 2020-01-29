@@ -81,28 +81,17 @@ fs.readdir("./Javascript/Server/", (err, files) => {
   });
 });
 
-//Bot Config
+//Bot Options
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
   //bot.user.setActivity("Dutch Life Roleplay", { type: "Playing" });
 });
 
-//main
 bot.on("message", async message => {
   if (message.author.bot) return;
 
   if (message.channel.type === "dm") return;
-
-  //var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
-
-  //if (!prefixes[message.guild.id]) {
-  //prefixes[message.guild.id] = {
-  //  prefixes: botConfig.prefix
-  //  };
-  //}
-
-  //var prefix = prefixes[message.guild.id].prefixes;
 
   var messageArrey = message.content.split(" ");
 

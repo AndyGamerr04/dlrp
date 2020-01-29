@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
+    if (!message.member.hasPermission("VIEW_AUDIT_LOG")) {
 
         var err = new discord.RichEmbed()
             .setColor("0x333333")
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
         .setColor("ef7f1b")
-        .setTitle("**Hentai**")
+        .setTitle("**Hentai** :underage:")
         .setImage(hen.body.message);
 
     message.channel.send(embed).then(msg => msg.delete(50000));

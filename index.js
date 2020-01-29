@@ -4,24 +4,32 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./Js/Commands/", (err, files) => {
+fs.readdir("./Js", (err, files) => {
   if (err) console.log(err);
-
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
   if (jsFiles.length <= 0) {
     console.log("script not found!");
     return;
   }
+  jsFiles.forEach((f, i) => {
+    var fileGet = require(`./Js${f}`);
+    console.log(`${f} are now loaded`);
+    bot.commands.set(fileGet.help.name, fileGet);
+  });
+});
 
+fs.readdir("./Js/Commands/", (err, files) => {
+  if (err) console.log(err);
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+  if (jsFiles.length <= 0) {
+    console.log("script not found!");
+    return;
+  }
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Js/Commands/${f}`);
     console.log(`${f} are now loaded`);
-
     bot.commands.set(fileGet.help.name, fileGet);
-
   });
-
 });
 
 bot.on("ready", async () => {

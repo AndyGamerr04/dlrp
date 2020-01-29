@@ -5,26 +5,6 @@ const active = new Map();
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-//Javascript
-fs.readdir("./Javascript/", (err, files) => {
-  if (err) console.log(err);
-
-  var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-  if (jsFiles.length <= 0) {
-    console.log("script not found!");
-    return;
-  }
-
-  jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/${f}`);
-    console.log(`${f} loaded!`);
-
-    bot.commands.set(fileGet.help.name, fileGet);
-  });
-});
-
-//Commands
 fs.readdir("./Javascript/Commands/", (err, files) => {
   if (err) console.log(err);
 
@@ -42,27 +22,6 @@ fs.readdir("./Javascript/Commands/", (err, files) => {
     bot.commands.set(fileGet.help.name, fileGet);
   });
 });
-
-//Private
-fs.readdir("./Javascript/Private/", (err, files) => {
-  if (err) console.log(err);
-
-  var jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-  if (jsFiles.length <= 0) {
-    console.log("script not found!");
-    return;
-  }
-
-  jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Javascript/Private/${f}`);
-    console.log(`${f} loaded!`);
-
-    bot.commands.set(fileGet.help.name, fileGet);
-  });
-});
-
-//Server
 fs.readdir("./Javascript/Server/", (err, files) => {
   if (err) console.log(err);
 
@@ -81,7 +40,6 @@ fs.readdir("./Javascript/Server/", (err, files) => {
   });
 });
 
-//Bot Options
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 

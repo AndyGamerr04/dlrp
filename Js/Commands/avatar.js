@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
     const avatarEmbed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
+        .setAuthor(`${user.username}#${user.discriminator}`)
         .setImage(user.avatarURL);
     message.channel.send(avatarEmbed);
 

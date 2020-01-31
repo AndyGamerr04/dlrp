@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const moment = require("moment");
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
+var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -10,6 +11,8 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
+    const user = message.mentions.users.first() || message.author;
+
     var announce = args.join(" ");
 
     if (!announce) return message.channel.send("!announce (announce + link)");
@@ -17,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     var announceEmbed = new discord.RichEmbed()
         .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
         .setColor(mainColor)
-        .setDescription(`**Dutch Life Roleplay Announcement | @everyone **\n\n${announce}`)
+        .setDescription(`${serverName} **Announcement | @everyone **\n\n${announce}`)
         .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var announceChannel = message.guild.channels.find(`name`, "📍announcements");

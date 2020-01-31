@@ -9,27 +9,19 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    var id = user.id;
-    var avatar = user.avatarURL;
-
     const botEmbed = new discord.RichEmbed()
         .setThumbnail(user.avatarURL)
         .setColor(mainColor)
-        .setAuthor(`${user.username}#${user.discriminator}`, `${avatar}`)
-
-        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-        .addField("**Nitro**", `${user.verified}`, true)
-
-        .addField("**Joind Server**", `${user.notes}`, true)
-        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-
+        .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
+        .addField("   **Joind Server At**", `   ${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("   **Joind Discord At**", `   ${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
         .setTimestamp()
-        .setFooter(`User ID: ${id}`);
+        .setFooter(`User ID: ${user.id}`);
 
     return message.channel.send(botEmbed).then(msg => msg.delete(80000));
 
 }
 
 module.exports.help = {
-    name: "userinfo"
+    name: "me"
 }

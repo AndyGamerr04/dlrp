@@ -16,8 +16,13 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(user.avatarURL)
         .setColor(mainColor)
         .setAuthor(`${user.username}#${user.discriminator}`, `${avatar}`)
-        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, false)
-        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, false)
+
+        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Nitro**", `${user.verified}`, true)
+
+        .addField("**Joind Server**", `${user.notes}`, true)
+        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+
         .setTimestamp()
         .setFooter(`User ID: ${id}`);
 
@@ -26,5 +31,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "ik"
+    name: "userinfo"
 }

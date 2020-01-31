@@ -7,14 +7,14 @@ module.exports.run = async (bot, message, args) => {
 
     const user = message.mentions.users.first() || message.author;
 
-    message.delete();
+    message.delete().then(msg => msg.delete(80000));
 
     const botEmbed = new discord.RichEmbed()
         .setThumbnail(user.avatarURL)
         .setColor(mainColor)
         .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
-        .addField("   **Joind Server At**", `   ${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-        .addField("   **Joind Discord At**", `   ${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Server At**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Discord At**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
         .setTimestamp()
         .setFooter(`User ID: ${user.id}`);
 

@@ -4,11 +4,12 @@ var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
+
     const user = message.mentions.users.first() || message.author;
 
     const avatarEmbed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setAuthor(user.username)
+        .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
         .setImage(user.avatarURL);
     message.channel.send(avatarEmbed);
 

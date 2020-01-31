@@ -48,10 +48,6 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
 
-  if (!args[0]) {
-    console.log(`Command not Found`);
-  }
-
   if (message.author.bot) return;
 
   if (message.channel.type === "dm") return;

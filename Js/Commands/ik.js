@@ -16,12 +16,12 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(user.avatarURL)
         .setColor(mainColor)
         .setAuthor(`${user.username}#${user.discriminator}`, `${avatar}`)
-        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
-        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Server**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss")}`, false)
+        .addField("**Joind Discord**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, false)
         .setTimestamp()
-        .setFooter(`${id}`);
+        .setFooter(`User ID: ${id}`);
 
-    return message.channel.send(botEmbed).then(msg => msg.delete(50000));
+    return message.channel.send(botEmbed).then(msg => msg.delete(80000));
 
 }
 

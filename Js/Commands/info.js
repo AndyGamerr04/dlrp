@@ -24,15 +24,17 @@ module.exports.run = async (bot, message, args) => {
 
   var serverEmbed = new discord.RichEmbed()
     .setColor(mainColor)
+
+    .setTitle(``)
+
     .setThumbnail(message.guild.iconURL)
     .addField("Region", region[message.guild.region], true)
     .addField("Owner", message.guild.owner, true)
-    .addBlankField()
     .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
-    .addField("Total Members", message.guild.members.size, true)
     .addBlankField()
     //.addField("Humans",`${message.guild.members.filter(member => !member.user.bot).size}`,true)
     //.addField("Bots",`${message.guild.members.filter(member => member.user.bot).size}`,true)
+    .addField("Total Members", message.guild.members.size, true)
     .addField("Channels", message.guild.channels.size, true)
     .addField("Total Roles", message.guild.roles.size, true)
     .setTimestamp()

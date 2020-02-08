@@ -28,10 +28,10 @@ module.exports.run = async (bot, message, args) => {
     .setTitle(``)
 
     .setThumbnail(message.guild.iconURL)
-    .addField("Region", region[message.guild.region], true)
     .addField("Owner", message.guild.owner, true)
+    .addField("Region", region[message.guild.region], true)
     .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
-    .addBlankField()
+    //.addBlankField()
     //.addField("Humans",`${message.guild.members.filter(member => !member.user.bot).size}`,true)
     //.addField("Bots",`${message.guild.members.filter(member => member.user.bot).size}`,true)
     .addField("Total Members", message.guild.members.size, true)

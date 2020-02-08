@@ -5,7 +5,7 @@ const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
 fs.readdir("./Js/Commands/", (err, files) => {
-  if (err) console.log(err);
+  //if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
     console.log("script not found!");
@@ -22,7 +22,7 @@ fs.readdir("./Js/Commands/", (err, files) => {
 });
 
 fs.readdir("./Js/Temp/", (err, files) => {
-  if (err) console.log(err);
+  //if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
     console.log("script not found!");
@@ -63,14 +63,6 @@ bot.on("message", async message => {
   var commands = bot.commands.get(command.slice(prefix.length));
 
   if (command) commands.run(bot, message, arguments);
-
-  try {
-    null.arguments()
-  } catch (e) {
-    console.log(e instanceof TypeError)  // true
-    console.log(e.message)               // "null has no properties"
-    console.log(e.name)                  // "TypeError"
-  }
 
 });
 

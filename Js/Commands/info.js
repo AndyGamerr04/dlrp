@@ -34,9 +34,9 @@ module.exports.run = async (bot, message, args) => {
     //.addBlankField()
     //.addField("Humans",`${message.guild.members.filter(member => !member.user.bot).size}`,true)
     //.addField("Bots",`${message.guild.members.filter(member => member.user.bot).size}`,true)
-    .addField("Total Members", message.guild.members.size, true)
     .addField("Channels", message.guild.channels.size, true)
-    .addField("Total Roles", message.guild.roles.size, true)
+    .addField("Members", message.guild.members.size, true)
+    .addField("Roles", message.guild.roles.size, true)
     .setTimestamp()
     .setFooter('Bot Creator ΛΝDY#2020 | Version 0.1.2');
   return message.channel.send(serverEmbed).then(msg => msg.delete(90000));

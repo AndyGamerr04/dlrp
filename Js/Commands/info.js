@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
   var serverEmbed = new discord.RichEmbed()
     .setColor(mainColor)
-    .setThumbnail(icon)
+    .setThumbnail(message.guild.iconURL)
     .addField("Region", region[message.guild.region], true)
     .addField("Owner", message.guild.owner, true)
     .addField(

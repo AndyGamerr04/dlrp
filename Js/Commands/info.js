@@ -27,26 +27,16 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(message.guild.iconURL)
     .addField("Region", region[message.guild.region], true)
     .addField("Owner", message.guild.owner, true)
-    .addField(
-      "Verification Level",
-      verifLevels[message.guild.verificationLevel],
-      true
-    )
+    .addBlankField()
+    .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
     .addField("Total Members", message.guild.members.size, true)
-    .addField(
-      "Humans",
-      `${message.guild.members.filter(member => !member.user.bot).size}`,
-      true
-    )
-    .addField(
-      "Bots",
-      `${message.guild.members.filter(member => member.user.bot).size}`,
-      true
-    )
+    .addBlankField()
+    //.addField("Humans",`${message.guild.members.filter(member => !member.user.bot).size}`,true)
+    //.addField("Bots",`${message.guild.members.filter(member => member.user.bot).size}`,true)
     .addField("Channels", message.guild.channels.size, true)
     .addField("Total Roles", message.guild.roles.size, true)
     .setTimestamp()
-    .setFooter('Bot Creator ΛΝDY#2020');
+    .setFooter('Bot Creator ΛΝDY#2020 | Version 0.1.2');
   return message.channel.send(serverEmbed).then(msg => msg.delete(90000));
 };
 

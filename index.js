@@ -5,7 +5,7 @@ const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
 fs.readdir("./Js/Commands/", (err, files) => {
-  //if (err) console.log(err);
+  if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
     console.log("script not found!");
@@ -22,7 +22,7 @@ fs.readdir("./Js/Commands/", (err, files) => {
 });
 
 fs.readdir("./Js/Temp/", (err, files) => {
-  //if (err) console.log(err);
+  if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
     console.log("script not found!");
@@ -48,21 +48,26 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
 
-  if (message.author.bot) return;
+  try {
 
-  if (message.channel.type === "dm") return;
+    if (message.author.bot) return;
 
-  var messageArrey = message.content.split(" ");
+    if (message.channel.type === "dm") return;
 
-  var prefix = botConfig.prefix;
+    var messageArrey = message.content.split(" ");
 
-  var command = messageArrey[0];
+    var prefix = botConfig.prefix;
 
-  var arguments = messageArrey.slice(1);
+    var command = messageArrey[0];
 
-  var commands = bot.commands.get(command.slice(prefix.length));
+    var arguments = messageArrey.slice(1);
 
-  if (command) commands.run(bot, message, arguments);
+    var commands = bot.commands.get(command.slice(prefix.length));
+
+    if (command) commands.run(bot, message, arguments);
+
+  }
+  catch (err) { }
 
 });
 

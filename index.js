@@ -15,7 +15,7 @@ fs.readdir("./Js/Commands/", (err, files) => {
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Js/Commands/${f}`);
 
-    console.log(`${f} are now loaded`);
+    //console.log(`${f} are now loaded`);
 
     bot.commands.set(fileGet.help.name, fileGet);
   });
@@ -32,7 +32,7 @@ fs.readdir("./Js/Temp/", (err, files) => {
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Js/Temp/${f}`);
 
-    console.log(`${f} are now loaded`);
+    //console.log(`${f} are now loaded`);
 
     bot.commands.set(fileGet.help.name, fileGet);
   });
@@ -42,7 +42,7 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setActivity("the server", { type: "Streaming" });
+  //bot.user.setActivity("the server", { type: "Streaming" });
 
 });
 

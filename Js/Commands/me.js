@@ -17,7 +17,6 @@ module.exports.run = async (bot, message, args) => {
         .addField("**Joind Discord At**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss")}`, true)
         .setTimestamp()
         .setFooter(`User ID: ${user.id}`);
-
     return message.channel.send(botEmbed).then(msg => msg.delete(80000));
 
 }

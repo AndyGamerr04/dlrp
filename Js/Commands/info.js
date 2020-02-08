@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Channels", message.guild.channels.size, true)
     .addField("Total Roles", message.guild.roles.size, true)
     .addField("Bot Creator", `ΛΝDY#2020`, true);
-  return message.channel.send(serverEmbed).then(msg => msg.delete(50000));
+  return message.channel.send(serverEmbed).then(msg => msg.delete(90000));
 };
 
 module.exports.help = {

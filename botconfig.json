@@ -1,5 +1,6 @@
 {
     "prefix": "!",
     "mainColor": "#7289DA",
+    "errColor": "#7289DA",
     "serverName": "**Server**"
 }

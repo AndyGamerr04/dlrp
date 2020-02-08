@@ -1,5 +1,6 @@
 const discord = require("discord.js");
 const moment = require("moment");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -12,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("!idee (idee + link)");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setColor("#45fc03")
+        .setColor(mainColor)
         .setDescription(`💡 **Idee aanvraag van ${user}**\n\n${idee}`)
         .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 

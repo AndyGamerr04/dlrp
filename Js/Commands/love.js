@@ -1,6 +1,7 @@
 const discord = module.require('discord.js');
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
+var errColor = botConfig.errColor;
 
 var Responses = [
     "Ja!",
@@ -24,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
     if (!args[0]) {
 
         var loveerr = new discord.RichEmbed()
-            .setColor("D50000")
+            .setColor(errColor)
             .addField("**Fout**", "*Voer een persoonsnaam in.*");
 
         return message.channel.send(loveerr).then(msg => msg.delete(3000));

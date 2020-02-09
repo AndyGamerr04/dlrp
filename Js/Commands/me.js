@@ -3,6 +3,7 @@ const moment = require("moment");
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
 
+var newYork = moment.tz("2014-06-01 12:00", "America/New_York");
 var nl = newYork.clone().tz("Europe/Amsterdam");
 
 module.exports.run = async (bot, message, args) => {

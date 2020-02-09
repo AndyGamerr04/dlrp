@@ -9,9 +9,11 @@
   "author": "Andy",
   "license": "ISC",
   "dependencies": {
+    "@types/moment-timezone": "^0.5.12",
     "discord.js": "^11.5.0",
     "fs": "0.0.1-security",
     "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
     "node-fetch": "^2.6.0",
     "opusscript": "0.0.6",
     "superagent": "^5.0.5",

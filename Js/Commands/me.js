@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(user.avatarURL)
         .setColor(mainColor)
         .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
-        .addField("**Joind Server At**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY, HH:mm:ss").tz("Europe/Amsterdam")}`, true)
-        .addField("**Joind Discord At**", `${moment.utc(user.createdAt).format("DD MMM YYYY, HH:mm:ss").tz("Europe/Amsterdam")}`, true)
+        .addField("**Joind Server At**", `${moment.utc(message.member.joinedAt).tz("Europe/Amsterdam").format("DD MMM YYYY, HH:mm:ss")}`, true)
+        .addField("**Joind Discord At**", `${moment.utc(user.createdAt).tz("Europe/Amsterdam").format("DD MMM YYYY, HH:mm:ss")}`, true)
         .setTimestamp()
         .setFooter(`User ID: ${user.id}`);
     return message.channel.send(botEmbed).then(msg => msg.delete(80000));

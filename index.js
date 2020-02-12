@@ -43,7 +43,7 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  //bot.user.setActivity("the server", { type: "Streaming" });
+  bot.user.setActivity("with the world!", { type: "playing" });
 
 });
 

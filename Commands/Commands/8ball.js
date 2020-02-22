@@ -1,5 +1,6 @@
 const discord = module.require('discord.js');
 const botConfig = require("../../botconfig.json");
+
 var mainColor = botConfig.mainColor;
 var errColor = botConfig.errColor;
 var errMessage = botConfig.errMessage;
@@ -19,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor(errColor)
       .addField(`${errMessage}`, "*Enter a question that you would like to answer.*");
 
-    return message.channel.send(err).then(msg => msg.delete(4000));
+    return message.channel.send(err).then(msg => msg.delete(8000));
   }
 
   if (args[0]) {
@@ -34,9 +35,9 @@ module.exports.run = async (bot, message, args) => {
 
     var errb = new Discord.RichEmbed()
       .setColor(errColor)
-      .addField("**Fout**", "*Ik kon dat niet lezen., Probeer het opnieuw!*");
+      .addField(`${errMessage}`, "*I could not read that. Try again!*");
 
-    message.channel.send(errb).then(msg => msg.delete(4000));
+    message.channel.send(errb).then(msg => msg.delete(8000));
   }
 
 }

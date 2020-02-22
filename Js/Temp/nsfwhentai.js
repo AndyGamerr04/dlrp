@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    if (!message.member.hasPermission("VIEW_AUDIT_LOG")) {
+    if (!message.member.roles.find(r => r.name === "weebs")) {
 
         var err = new discord.RichEmbed()
             .setColor("0x333333")

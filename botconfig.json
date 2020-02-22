@@ -2,5 +2,6 @@
     "prefix": "!",
     "mainColor": "#77b0fd",
     "errColor": "#7289DA",
+    "errMessage": "**Something went wrong! 😕**",
     "serverName": "**Server**"
 }

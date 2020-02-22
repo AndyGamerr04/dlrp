@@ -15,10 +15,10 @@ fs.readdir("./Js/Commands/", (err, files) => {
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Js/Commands/${f}`);
 
-    //console.log(`${f} are now loaded`);
-
     bot.commands.set(fileGet.help.name, fileGet);
+
   });
+
 });
 
 fs.readdir("./Js/Temp/", (err, files) => {
@@ -32,10 +32,10 @@ fs.readdir("./Js/Temp/", (err, files) => {
   jsFiles.forEach((f, i) => {
     var fileGet = require(`./Js/Temp/${f}`);
 
-    //console.log(`${f} are now loaded`);
-
     bot.commands.set(fileGet.help.name, fileGet);
+
   });
+
 });
 
 

@@ -7,7 +7,6 @@ module.exports.run = async (bot, message, args) => {
     var perm = new Discord.RichEmbed()
       .setColor(errColor)
       .addField("Error", "*You don't have permission.*");
-
     return message.channel.send(perm).then(msg => msg.delete(2000));
   }
 
@@ -15,7 +14,6 @@ module.exports.run = async (bot, message, args) => {
     var err = new Discord.RichEmbed()
       .setColor(errColor)
       .addField("Error", "*Invalid number.*");
-
     return message.channel.send(err).then(msg => msg.delete(2000));
   }
 

@@ -26,7 +26,6 @@ module.exports.run = async (bot, message, args) => {
     if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     announceChannel.send(announceEmbed);
-
 }
 
 module.exports.help = {

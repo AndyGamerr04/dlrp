@@ -4,7 +4,6 @@ var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
-
     const user = message.mentions.users.first() || message.author;
 
     const avatarEmbed = new discord.RichEmbed()

@@ -2,6 +2,7 @@ const discord = module.require('discord.js');
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
 var errColor = botConfig.errColor;
+var errMessage = botConfig.errMessage;
 
 var fortunes = [
   "Ja!",
@@ -16,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
     var err = new discord.RichEmbed()
       .setColor(errColor)
-      .addField("**Fout**", "*Voer een vraag in die u graag wilt beantwoorden.*");
+      .addField(`${errMessage}`, "*Enter a question that you would like to answer.*");
 
     return message.channel.send(err).then(msg => msg.delete(4000));
   }
@@ -37,6 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.channel.send(errb).then(msg => msg.delete(4000));
   }
+
 }
 
 module.exports.help = {

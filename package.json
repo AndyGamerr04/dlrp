@@ -1,7 +1,7 @@
 {
-  "name": "andybot",
-  "version": "1.0.0",
-  "description": "andy",
+  "name": "emes",
+  "version": "1.4",
+  "description": "Easy Moderation Entertainment System",
   "main": "index.js",
   "scripts": {
     "start": "nodemon"

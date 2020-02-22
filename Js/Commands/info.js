@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
-var version = package.version;
+//var version = package.version;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Members", message.guild.members.size, true)
     .addField("Roles", message.guild.roles.size, true)
     .setTimestamp()
-    .setFooter(`Bot version: ${version}`);
+  //.setFooter(`Bot version: ${version}`);
   return message.channel.send(serverEmbed).then(msg => msg.delete(90000));
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "emes",
-  "version": "1.4",
+  "version": "1.0.0",
   "description": "Easy Moderation Entertainment System",
   "main": "index.js",
   "scripts": {

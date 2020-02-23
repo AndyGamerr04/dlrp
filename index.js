@@ -43,7 +43,8 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setActivity("with the world!", { type: "playing" });
+  //bot.user.setActivity("with the world!", { type: "playing" });
+  bot.user.setActivity("powered by ΛNDY & Friend's™", { type: "playing" });
 
 });
 

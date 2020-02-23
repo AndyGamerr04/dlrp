@@ -1,12 +1,10 @@
 const discord = module.require('discord.js');
-const variables = require("../../variables.js");
+const botConfig = require("../../botconfig.json");
 
-var fortunes = [
-  "Ja!",
-  "Nee!",
-  "Dat kan!",
-  "Ik weet niet, probeer het opnieuw!"
-];
+var mainColor = botConfig.mainColor;
+var errColor = botConfig.errColor;
+var errMessage = botConfig.errMessage;
+var fortunes = ["Yes!", "No!", "Maybe!", "I don't know, try again!"];
 
 module.exports.run = async (bot, message, args) => {
 

@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
 
     var idee = args.join(" ");
 
+    var servername = message.guild.name;
+
     var user = message.author;
 
     if (!idee) return message.channel.send("!idee (idee + link)");
@@ -16,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
         .setColor(mainColor)
         .setDescription(`💡 **Idee aanvraag van ${user}**\n\n${idee}`)
-        .setFooter(`Dutch Life Roleplay | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
+        .setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
 
     var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");

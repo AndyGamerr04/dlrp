@@ -3,7 +3,9 @@ const moment = require("moment");
 const botConfig = require("../../botconfig.json");
 
 var mainColor = botConfig.mainColor;
+
 var errColor = botConfig.errColor;
+
 var errMessage = botConfig.errMessage;
 
 module.exports.run = async (bot, message, args) => {
@@ -18,31 +20,41 @@ module.exports.run = async (bot, message, args) => {
     }*/
 
     var idee = args.join(" ");
+
     var servername = message.guild.name;
+
     var user = message.author;
 
     if (!idee) {
+
         var ideeErr = new discord.RichEmbed()
+
             .setColor(errColor)
             .addField(`${errMessage}`, "*You didn't say your idea.*");
+
         return message.channel.send(ideeErr);
+
     }
 
     var ideeEmbed = new discord.RichEmbed()
+
         .setColor(mainColor)
         .setDescription(`💡 **Idea request from ${user}**\n\n${idee}`)
         .setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
+
     message.channel.send(ideeEmbed);
 
-    message.guild.channels.send(ideeEmbed).then(embedMessage => {
+    /*var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
+    if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");*/
+
+    ideeEmbed.send(ideeEmbed).then(embedMessage => {
+
         embedMessage.react('👍');
         embedMessage.react('👎');
+
     });
 
 }
-
-/*var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
-if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");*/
 
 module.exports.help = {
     name: "idea"

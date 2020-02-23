@@ -1,7 +1,7 @@
 {
     "prefix": "!",
     "mainColor": "#77b0fd",
-    "errColor": "#7289DA",
+    "errColor": "#ffa600",
     "errMessage": "**Something went wrong! 😕**",
     "serverName": "**Server**"
 }

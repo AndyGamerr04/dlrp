@@ -17,6 +17,12 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(err).then(msg => msg.delete(8000));
     }
 
+    if (!idee) {
+        var ideeErr = new discord.RichEmbed()
+            .setColor(errColor)
+            .addField(`${errMessage}`, "*You didn't say your idea.*");
+        return message.channel.send(ideeErr);
+    }
 
     var idee = args.join(" ");
     var servername = message.guild.name;
@@ -29,16 +35,7 @@ module.exports.run = async (bot, message, args) => {
         .setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
     message.channel.send(ideeEmbed);
 
-
-    if (!idee) {
-        var ideeErr = new discord.RichEmbed()
-            .setColor(errColor)
-            .addField(`${errMessage}`, "*You didn't say your idea.*");
-        return message.channel.send(ideeErr);
-    }
-
-
-    ideeChannel.send(ideeEmbed).then(embedMessage => {
+    message.guild.channels.send(ideeEmbed).then(embedMessage => {
         embedMessage.react('👍');
         embedMessage.react('👎');
     });

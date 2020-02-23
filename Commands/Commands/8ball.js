@@ -1,9 +1,5 @@
 const discord = module.require('discord.js');
-const botConfig = require("../../botconfig.json");
-
-var mainColor = botConfig.mainColor;
-var errColor = botConfig.errColor;
-var errMessage = botConfig.errMessage;
+const variables = require("../../variables.js");
 
 var fortunes = [
   "Ja!",

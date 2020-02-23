@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor(errColor)
             .addField(`${errMessage}`, "*You don't have permission.*");
 
-        return message.channel.send(err).then(msg => msg.delete(4000));
+        return message.channel.send(err).then(msg => msg.delete(8000));
 
     }
 
@@ -24,17 +24,21 @@ module.exports.run = async (bot, message, args) => {
     var servername = message.guild.name;
     var user = message.author;
 
-    if (!idee) return message.channel.send("!idee (idee + link)");
+    if (!idee) return message.channel.send(ideeErr);
+    var ideeErr = new discord.RichEmbed()
+        .setColor(errColor)
+        .addField(`${errMessage}`, "*You didn't say your idea.*");
+
+    //
 
     var ideeEmbed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setDescription(`💡 **Idee aanvraag van ${user}**\n\n${idee}`)
+        .setDescription(`💡 **Idea request from ${user}**\n\n${idee}`)
         .setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
+    message.channel.send(ideeEmbed);
 
     //var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
     //if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
-
-    message.channel.send(ideeEmbed);
 
     ideeChannel.send(ideeEmbed).then(embedMessage => {
         embedMessage.react('👍');

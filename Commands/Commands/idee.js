@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
     var idee = args.join(" ");
 
-    var servername = message.guild.name;
+    //var servername = message.guild.name;
 
     var user = message.author;
 
@@ -40,14 +40,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor(mainColor)
         .setDescription(`💡 **Idea request from ${user}**\n\n${idee}`)
-        .setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
+    //.setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
 
-    message.channel.send(ideeEmbed);
-
-    /*var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
-    if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");*/
-
-    ideeEmbed.send(ideeEmbed).then(embedMessage => {
+    message.channel.send(ideeEmbed).then(embedMessage => {
 
         embedMessage.react('👍');
         embedMessage.react('👎');

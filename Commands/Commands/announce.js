@@ -6,7 +6,7 @@ var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
 
-    if (!message.member.roles.find(r => r.name === "support")) {
+    if (!message.member.roles.find(r => r.name === "Support")) {
 
         var err = new discord.RichEmbed()
             .setColor("0x333333")

@@ -26,9 +26,9 @@ module.exports.run = async (bot, message, args) => {
 
     var announceEmbed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setDescription(`${serverName} **Mededeling | @everyone :Verified: **\n\n${announce}`)
+        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
         //.setFooter(`Announcement by ${user.username}#${user.discriminator} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
-        .setFooter(`Mededeling door ${user.username}#${user.discriminator}`);
+        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
     var announceChannel = message.guild.channels.find(`name`, "🚨mededelingen");
     if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");

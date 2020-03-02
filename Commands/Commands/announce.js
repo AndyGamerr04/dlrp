@@ -22,12 +22,13 @@ module.exports.run = async (bot, message, args) => {
 
     var announce = args.join(" ");
 
-    if (!announce) return message.channel.send("!meld (announce + link)");
+    if (!announce) return message.channel.send("!meld (bericht)");
 
     var announceEmbed = new discord.RichEmbed()
         .setColor(mainColor)
-        .setDescription(`${serverName} **Announcement | @everyone **\n\n${announce}`)
-        .setFooter(`Announcement by ${user.username}#${user.discriminator} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
+        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
+        //.setFooter(`Announcement by ${user.username}#${user.discriminator} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
+        .setFooter(`Mededeling door ${user.username}#${user.discriminator}`);
 
     var announceChannel = message.guild.channels.find(`name`, "🚨mededelingen");
     if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");

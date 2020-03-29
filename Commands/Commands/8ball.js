@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
       .addField(`${errMessage}`, "*Enter a question that you would like to answer.*");
 
     return message.channel.send(err).then(msg => msg.delete(8000));
+
   }
 
   if (args[0]) {

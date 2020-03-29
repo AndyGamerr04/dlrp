@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
         var ideeErr = new discord.RichEmbed()
 
             .setColor(errColor)
-            .addField(`${errMessage}`, "*You didn't say your idea.*");
+            .addField(`${errMessage}`, "*Je hebt je idee niet uitgesproken.*");
 
         return message.channel.send(ideeErr);
 
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
 
         .setColor(mainColor)
-        .setDescription(`💡 **Idea request from ${user}**\n\n${idee}`)
+        .setDescription(`💡 **Idee-aanvraag van ${user}**\n\n${idee}`)
     //.setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
 
     message.channel.send(ideeEmbed).then(embedMessage => {
@@ -59,5 +59,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "idea"
+    name: "idee"
 }

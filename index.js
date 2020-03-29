@@ -43,11 +43,22 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  //bot.user.setActivity("with the world!", { type: "playing" });
   bot.user.setActivity("Limburg Roleplay", { type: "playing" });
   //bot.user.setActivity("to ΛNDY & Friend's™", { type: "listening" });
+  //bot.user.setActivity("with the world!", { type: "playing" });
 
 });
+
+
+bot.on('guildMemberAdd', member => {
+
+  //console.log('User ' + member.username + ' is gejoing!')
+  var role = member.guild.roles.find('name', 'Burger')
+
+  member.addRole(role)
+
+});
+
 
 bot.on("message", async message => {
 

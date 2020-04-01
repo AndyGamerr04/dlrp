@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const botConfig = require("../../botconfig.json");
 
-var mainColor = botConfig.mainColor;
+var mainColor = botConfig.groenColor;
 var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
@@ -15,8 +15,8 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
 
         .setColor(mainColor)
-        .setDescription(`${serverName} **poll aanvraag | @everyone **\n\n${idee}\n`)
-        .setFooter(`  Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
+        .setDescription(`${serverName} **poll aanvraag van ${message.author} **\n\n${idee}`)
+    //.setFooter(`Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 
     var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");

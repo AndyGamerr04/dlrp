@@ -16,15 +16,15 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor(mainColor)
         .setDescription(`${serverName} **poll aanvraag | @everyone **\n\n${idee}`)
-        .setFooter(`Ingezonden door: ${user}`);
+        .setFooter(`${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 
     var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     ideeChannel.send(ideeEmbed).then(message => {
-        message.react('🍎')
-            .then(() => message.react('694938568497430528'))
-            .then(() => message.react('682781949445931031'))
+        message.react('694941616481501244')
+            .then(() => message.react('694941616368254987'))
+            //.then(() => message.react('682781949445931031'))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
     });
 

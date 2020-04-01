@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`${serverName} **poll aanvraag van ${message.author} **\n\n${idee}`)
     //.setFooter(`Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 
-    var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
+    var ideeChannel = message.guild.channels.find(`name`, "🧩poll-suggestie");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     ideeChannel.send(ideeEmbed).then(message => {

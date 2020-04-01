@@ -21,10 +21,9 @@ module.exports.run = async (bot, message, args) => {
     }
     */
 
-    /*
-    var ideeChannel = message.guild.channels.find(`name`, "💡idee-aanvraag");
+
+    var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
-    */
 
     var idee = args.join(" ");
 
@@ -46,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
 
         .setColor(mainColor)
-        .setDescription(`💡 **Idee-aanvraag van ${user}**\n\n${idee}`)
+        .setDescription(`💡 **Poll van ${user}**\n\n${idee}`)
     //.setFooter(`${servername} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
 
     message.channel.send(ideeEmbed).then(embedMessage => {
@@ -59,5 +58,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "idee"
+    name: "poll"
 }

@@ -8,8 +8,6 @@ module.exports.run = async (bot, message, args) => {
 
     var idee = args.join(" ");
 
-    message.delete();
-
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
@@ -26,6 +24,8 @@ module.exports.run = async (bot, message, args) => {
         embedMessage.react('👎');
         embedMessage.react('🤷‍♂️');
     });
+
+    message.delete();
 
 }
 

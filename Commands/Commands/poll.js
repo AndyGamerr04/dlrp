@@ -23,8 +23,8 @@ module.exports.run = async (bot, message, args) => {
 
     ideeChannel.send(ideeEmbed).then(message => {
         message.react('🍎')
-            .then(() => message.react('671376052408287235'))
-            .then(() => message.react('671374402990112768'))
+            .then(() => message.react('694938568497430528'))
+            .then(() => message.react('682781949445931031'))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
     });
 

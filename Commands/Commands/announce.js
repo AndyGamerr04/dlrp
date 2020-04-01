@@ -11,7 +11,6 @@ module.exports.run = async (bot, message, args) => {
         var err = new discord.RichEmbed()
             .setColor("0x333333")
             .addField("**Error**", "*You don't have permission.*");
-
         return message.channel.send(err).then(msg => msg.delete(5000));
 
     }
@@ -29,7 +28,6 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
         //.setFooter(`Announcement by ${user.username}#${user.discriminator} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
-
     var announceChannel = message.guild.channels.find(`name`, "🚨mededelingen");
     if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
 

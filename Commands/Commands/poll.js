@@ -15,8 +15,8 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
 
         .setColor(mainColor)
-        .setDescription(`${serverName} **poll aanvraag | @everyone **\n\n${idee}`)
-        .setFooter(`${user.username}#${user.discriminator}`, `${user.avatarURL}`);
+        .setDescription(`${serverName} **poll aanvraag | @everyone **\n\n${idee}\n`)
+        .setFooter(`  Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 
     var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");

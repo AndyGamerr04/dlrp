@@ -11,16 +11,18 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${idee}`)
+
         .setColor(mainColor)
-        .addField("Ingezonden door: ", message.author);
+        .setDescription(`${serverName} **Poll aanvraag | @everyone **\n\n${idee}`)
+        .addField(`Ingezonden door: ${message.author}`);
 
     var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     ideeChannel.send(ideeEmbed).then(embedMessage => {
-        embedMessage.react('👍');
-        embedMessage.react('👎');
+        embedMessage.react('✔');
+        embedMessage.react('❌');
+        embedMessage.react('❔');
     });
 
 }

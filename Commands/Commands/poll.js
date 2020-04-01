@@ -8,6 +8,8 @@ module.exports.run = async (bot, message, args) => {
 
     var idee = args.join(" ");
 
+    var user = message.author;
+
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()

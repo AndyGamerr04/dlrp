@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
         .setDescription(`${serverName} **Mededeling | @everyone **\n\n${idee}`)
-        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`)
+        .setFooter(`Mededeling van ${user.discriminator}`)
         .setColor(mainColor)
         .addField("Ingezonden door: ", message.author);
 

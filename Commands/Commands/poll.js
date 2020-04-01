@@ -11,10 +11,9 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
+        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${idee}`)
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`)
         .setColor(mainColor)
-        .addField("Idee: ", idee)
         .addField("Ingezonden door: ", message.author);
 
     var ideeChannel = message.guild.channels.find(`name`, "💡poll-aanvraag");

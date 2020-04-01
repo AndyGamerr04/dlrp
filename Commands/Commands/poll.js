@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     ideeChannel.send(ideeEmbed).then(embedMessage => {
-        embedMessage.react(':grinning:');
-        embedMessage.react('❌');
-        embedMessage.react('❔');
+        embedMessage.react('👍');
+        embedMessage.react('👎');
+        embedMessage.react('🤷‍♂️');
     });
 
 }

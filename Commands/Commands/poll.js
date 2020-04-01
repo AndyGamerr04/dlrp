@@ -1,4 +1,8 @@
 const discord = require("discord.js");
+const botConfig = require("../../botconfig.json");
+
+var mainColor = botConfig.mainColor;
+var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -7,8 +11,9 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
 
     var ideeEmbed = new discord.RichEmbed()
-        .setTitle("Nieuw Idee")
-        .setColor("#00FF00")
+        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
+        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`)
+        .setColor(mainColor)
         .addField("Idee: ", idee)
         .addField("Ingezonden door: ", message.author);
 

@@ -43,8 +43,8 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setActivity("PornHub", { type: "watching" });
-  //bot.user.setActivity("Limburg Roleplay", { type: "playing" });
+  //bot.user.setActivity("PornHub", { type: "watching" });
+  bot.user.setActivity("Limburg Roleplay", { type: "playing" });
   //bot.user.setActivity("to ΛNDY & Friend's™", { type: "listening" });
   //bot.user.setActivity("with the world!", { type: "playing" });
 

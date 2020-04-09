@@ -21,7 +21,7 @@ fs.readdir("./Commands/Commands/", (err, files) => {
 
 });
 
-fs.readdir("./Commands/Temp/", (err, files) => {
+fs.readdir("./Commands/Commands/Temp/", (err, files) => {
   if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
@@ -30,7 +30,7 @@ fs.readdir("./Commands/Temp/", (err, files) => {
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Commands/Temp/${f}`);
+    var fileGet = require(`./Commands/Commands/Temp/${f}`);
 
     bot.commands.set(fileGet.help.name, fileGet);
 

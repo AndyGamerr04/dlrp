@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./Commands/", (err, files) => {
+fs.readdir("./Commands/cmd/", (err, files) => {
   if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
@@ -13,7 +13,7 @@ fs.readdir("./Commands/", (err, files) => {
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Commands/${f}`);
+    var fileGet = require(`./Commands/cmd/${f}`);
 
     bot.commands.set(fileGet.help.name, fileGet);
 

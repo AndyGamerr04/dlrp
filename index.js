@@ -44,9 +44,11 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
   //bot.user.setActivity("PornHub", { type: "watching" });
-  bot.user.setActivity(":smiley: Limburg Roleplay", { type: "Custom" });
+  //bot.user.setActivity(":smiley: Limburg Roleplay", { type: "Custom" });
   //bot.user.setActivity("to ΛNDY & Friend's™", { type: "listening" });
   //bot.user.setActivity("with the world!", { type: "playing" });
+  //bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/monstercat"}});
+  bot.user.setStatus('dnd', 'Made by ANDY')
 
 });
 

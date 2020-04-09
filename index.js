@@ -47,16 +47,11 @@ bot.on("ready", async () => {
   //bot.user.setActivity(":smiley: Limburg Roleplay", { type: "Custom" });
   //bot.user.setActivity("to ΛNDY & Friend's™", { type: "listening" });
   //bot.user.setActivity("with the world!", { type: "playing" });
-  //bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/monstercat"}});
+  //bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats"}});
   //client.user.setStatus('dnd', 'Made by ANDY')
+
   bot.user.setStatus('available')
-  bot.user.setPresence({
-    game: {
-      name: 'with depression',
-      type: "STREAMING",
-      url: "https://www.twitch.tv/relaxbeats"
-    }
-  });
+  bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
 
 });
 

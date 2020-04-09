@@ -43,15 +43,8 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
 
-  //bot.user.setActivity("PornHub", { type: "watching" });
-  //bot.user.setActivity(":smiley: Limburg Roleplay", { type: "Custom" });
-  //bot.user.setActivity("to ΛNDY & Friend's™", { type: "listening" });
-  //bot.user.setActivity("with the world!", { type: "playing" });
-  //bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats"}});
-  //client.user.setStatus('dnd', 'Made by ANDY')
-
-  //bot.user.setStatus('available')
-  bot.user.setPresence({ game: { name: 'With depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
+  bot.user.setActivity("Limburg Roleplay", { type: "playing" });
+  //bot.user.setPresence({ game: { name: 'With depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
 
 });
 

@@ -50,8 +50,8 @@ bot.on("ready", async () => {
   //bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats"}});
   //client.user.setStatus('dnd', 'Made by ANDY')
 
-  bot.user.setStatus('available')
-  bot.user.setPresence({ game: { name: 'with depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
+  //bot.user.setStatus('available')
+  bot.user.setPresence({ game: { name: 'With depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
 
 });
 

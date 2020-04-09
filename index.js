@@ -21,7 +21,7 @@ fs.readdir("./Commands/", (err, files) => {
 
 });
 
-fs.readdir("./Temp/", (err, files) => {
+/*fs.readdir("./Temp/", (err, files) => {
   if (err) console.log(err);
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
   if (jsFiles.length <= 0) {
@@ -36,7 +36,7 @@ fs.readdir("./Temp/", (err, files) => {
 
   });
 
-});
+});*/
 
 
 bot.on("ready", async () => {

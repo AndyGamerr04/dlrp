@@ -1,9 +1,9 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
+const botConfig = require("../../botconfig.json");
+var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
-
-    import * as variables from 'variables';
 
     var dog;
 
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-        .setColor(variables.mainColor)
+        .setColor(mainColor)
         .setTitle("**Dog** :dog:")
         .setImage(dog.body.url);
 

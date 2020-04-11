@@ -6,14 +6,12 @@ module.exports.run = async (bot, message, args) => {
 
     var user = message.author;
 
-    //if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
-
     if (!args[0]) {
 
         var err = new discord.RichEmbed()
 
             .setColor("2C2F33")
-            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen Idee meegegeven, gelieve een idee mee te geven.\n!poll + bericht*");
+            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen* **Idee** *meegegeven, gelieve een idee mee te geven.*\n!poll + bericht");
 
         return message.channel.send(err).then(msg => msg.delete(10000));
     }

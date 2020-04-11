@@ -21,7 +21,17 @@ module.exports.run = async (bot, message, args) => {
 
     var announce = args.join(" ");
 
-    if (!announce) return message.channel.send("!meld (bericht)");
+    //if (!announce) return message.channel.send("!meld (bericht)");
+    if (!args[0]) {
+
+        var err2 = new discord.RichEmbed()
+
+            .setColor("2C2F33")
+            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen* **Mededeling** *meegegeven, gelieve een idee mee te geven.*\n!meld + bericht");
+
+        return message.channel.send(err2).then(msg => msg.delete(10000));
+    }
+
 
     var announceEmbed = new discord.RichEmbed()
 

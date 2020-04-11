@@ -40,9 +40,18 @@ module.exports.run = async (bot, message, args) => {
 
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
-    var announceChannel = message.guild.channels.find(`name`, "🚨mededelingen");
+    var announceChannel = message.guild.channels.find(`name`, "🚨mededelingenX");
 
-    if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
+    //if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
+    if (!announceChannel) {
+
+        var err3 = new discord.RichEmbed()
+
+            .setColor("2C2F33")
+            .addField("**Er is iets fout gegaan! 😕**", "*Kan het kanaal niet vinden*");
+
+        return message.channel.send(err3).then(msg => msg.delete(7000));
+    }
 
     announceChannel.send(announceEmbed);
 }

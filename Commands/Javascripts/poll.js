@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
 
-        .setColor("#2C2F33")
+        .setColor("#7289DA")
 
         .setAuthor(`${user.username} heeft een poll gemaakt om`, `${user.avatarURL}`)
 
@@ -31,7 +31,16 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeChannel = message.guild.channels.find(`name`, "🧩poll-suggestie");
 
-    if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
+    //if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
+    if (!ideeChannel) {
+
+        var err2 = new discord.RichEmbed()
+
+            .setColor("2C2F33")
+            .addField("**Er is iets fout gegaan! 😕**", "*Kan het kanaal niet vinden*");
+
+        return message.channel.send(err2).then(msg => msg.delete(7000));
+    }
 
     ideeChannel.send(ideeEmbed).then(message => {
 

@@ -10,9 +10,9 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
 
-        .setColor("#008bd1")
+        .setColor("#33ff00")
 
-        .setTitle(`**\n\n${idee}**`)
+        .setTitle(`**\n${idee}\n**`)
 
         .setFooter(`${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 

@@ -12,7 +12,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#20232d")
 
-        .setAuthor(`${message.author} wilt dat ${idee}`, `${user.avatarURL}`)
+        .setAuthor(`${message.author} heeft een poll gemaakt om:`, `${user.avatarURL}`)
+
+        .setDescription(`\n${idee}\n`)
 
         .setFooter('!poll + bericht  |  om uw idee met de mensen te delen.');
 

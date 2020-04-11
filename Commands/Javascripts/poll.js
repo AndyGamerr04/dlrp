@@ -12,9 +12,11 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#33ff00")
 
-        .setTitle(`${idee}\n`)
+        .setAuthor(`${user.username}#${user.discriminator}`, `${user.avatarURL}`)
 
-        .setFooter(`${user.username}#${user.discriminator}`, `${user.avatarURL}`);
+        .setDescription(`\n${idee}\n`)
+
+        .setFooter('!poll + bericht | om uw idee met de mensen te delen.');
 
     var ideeChannel = message.guild.channels.find(`name`, "🧩poll-suggestie");
 

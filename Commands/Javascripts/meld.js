@@ -33,7 +33,6 @@ module.exports.run = async (bot, message, args) => {
 
         .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
 
-        //.setFooter(`Announcement by ${user.username}#${user.discriminator} | ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`);
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
     var announceChannel = message.guild.channels.find(`name`, "🚨mededelingen");

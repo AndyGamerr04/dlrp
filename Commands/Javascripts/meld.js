@@ -1,6 +1,4 @@
 const discord = require("discord.js");
-const botConfig = require("../../botconfig.json");
-var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -34,9 +32,9 @@ module.exports.run = async (bot, message, args) => {
 
     var announceEmbed = new discord.RichEmbed()
 
-        .setColor(mainColor)
+        .setColor("#7289DA")
 
-        .setDescription(`**Nieuwe mededeling @everyone **\n\n${announce}`)
+        .setDescription(`**Mededeling @everyone **\n\n${announce}`)
 
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 

@@ -4,6 +4,8 @@ var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
+    message.delete();
+
     //if (!message.member.roles.find(r => r.name === "Staff")) {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
@@ -12,10 +14,8 @@ module.exports.run = async (bot, message, args) => {
             .setColor("2C2F33")
             .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
 
-        return message.channel.send(err).then(msg => msg.delete(5000));
+        return message.channel.send(err).then(msg => msg.delete(7000));
     }
-
-    message.delete();
 
     const user = message.mentions.users.first() || message.author;
 
@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor("2C2F33")
             .addField(`**Er is iets fout gegaan! 😕**`, "*Geen* **Mededeling** *meegegeven, gelieve een idee mee te geven.*\n!meld + bericht");
 
-        return message.channel.send(err2).then(msg => msg.delete(10000));
+        return message.channel.send(err2).then(msg => msg.delete(7000));
     }
 
     var announceEmbed = new discord.RichEmbed()

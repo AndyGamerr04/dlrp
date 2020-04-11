@@ -2,6 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+    message.delete();
+
     var idee = args.join(" ");
 
     var user = message.author;
@@ -14,10 +16,8 @@ module.exports.run = async (bot, message, args) => {
             .setColor("2C2F33")
             .addField(`**Er is iets fout gegaan! 😕**`, "*Geen* **Idee** *meegegeven, gelieve een idee mee te geven.*\n!poll + bericht");
 
-        return message.channel.send(err).then(msg => msg.delete(10000));
+        return message.channel.send(err).then(msg => msg.delete(7000));
     }
-
-    message.delete();
 
     var ideeEmbed = new discord.RichEmbed()
 
@@ -42,8 +42,6 @@ module.exports.run = async (bot, message, args) => {
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });
-
-    //message.delete();
 
 }
 

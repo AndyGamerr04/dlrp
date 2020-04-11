@@ -32,7 +32,6 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(err2).then(msg => msg.delete(10000));
     }
 
-
     var announceEmbed = new discord.RichEmbed()
 
         .setColor(mainColor)

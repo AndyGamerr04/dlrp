@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     var user = message.author;
 
+    //if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
     if (!args[0]) {
 
         var err = new discord.RichEmbed()
@@ -15,6 +16,8 @@ module.exports.run = async (bot, message, args) => {
 
         return message.channel.send(err).then(msg => msg.delete(10000));
     }
+
+    message.delete();
 
     var ideeEmbed = new discord.RichEmbed()
 
@@ -40,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
 
     });
 
-    message.delete();
+    //message.delete();
 
 }
 

@@ -10,9 +10,9 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
 
-        .setColor("#20232d")
+        .setColor("#23272A")
 
-        .setAuthor(`${message.author} heeft een poll gemaakt om:`, `${user.avatarURL}`)
+        .setAuthor(`**${user.username} heeft een poll gemaakt om:**`, `${user.avatarURL}`)
 
         .setDescription(`\n${idee}\n`)
 

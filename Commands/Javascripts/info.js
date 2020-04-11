@@ -23,6 +23,7 @@ module.exports.run = async (bot, message, args) => {
   message.delete();
 
   var serverEmbed = new discord.RichEmbed()
+
     .setColor(mainColor)
     .setThumbnail(message.guild.iconURL)
     .addField("Owner", message.guild.owner, true)
@@ -32,7 +33,9 @@ module.exports.run = async (bot, message, args) => {
     .addField("Members", message.guild.members.size, true)
     .addField("Roles", message.guild.roles.size, true)
     .setTimestamp()
+
   return message.channel.send(serverEmbed).then(msg => msg.delete(90000));
+
 };
 
 module.exports.help = {

@@ -25,6 +25,7 @@ module.exports.run = async (bot, message, args) => {
     if (!args[0]) {
 
         var loveerr = new discord.RichEmbed()
+
             .setColor(errColor)
             .addField("**Fout**", "*Voer een persoonsnaam in.*");
 
@@ -35,6 +36,7 @@ module.exports.run = async (bot, message, args) => {
     if (args[0]) {
 
         var love = new discord.RichEmbed()
+
             .setColor(mainColor)
             .setAuthor(Responses[Math.floor(Math.random() * Responses.length)]);
 

@@ -1,8 +1,4 @@
 const discord = require("discord.js");
-const botConfig = require("../../botconfig.json");
-
-var mainColor = botConfig.groenColor;
-var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -14,18 +10,28 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
 
-        .setColor(mainColor)
-        .setDescription(`${serverName} **poll aanvraag van ${message.author} **\n\n${idee}`)
+        .setColor("#008bd1")
+
+        //    .setDescription(`**Poll aanvraag van ${message.author} **\n\n${idee}`)
+
+        .addField('**Poll aanvraag!**', `${idee}`, true)
+
+        .setFooter(`Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
+
     //.setFooter(`Ingezonden door: ${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 
     var ideeChannel = message.guild.channels.find(`name`, "🧩poll-suggestie");
+
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
 
     ideeChannel.send(ideeEmbed).then(message => {
-        message.react('694941616481501244')
-            .then(() => message.react('694941616368254987'))
-            //.then(() => message.react('682781949445931031'))
+
+        message.react('698550597414289499')
+
+            .then(() => message.react('698550597888245770'))
+            .then(() => message.react('698550597816680498'))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
+
     });
 
     message.delete();

@@ -11,11 +11,14 @@ module.exports.run = async (bot, message, args) => {
         .get("https://random.dog/woof.json");
 
     while (dog.body.url.endsWith(".webm") || dog.body.url.endsWith(".mp4")) {
+
         dog = await superAgent
             .get("https://random.dog/woof.json");
+
     }
 
     var embed = new discord.RichEmbed()
+
         .setColor(mainColor)
         .setTitle("**Dog** :dog:")
         .setImage(dog.body.url);

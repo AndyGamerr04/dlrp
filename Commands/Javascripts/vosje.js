@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
         .get("https://randomfox.ca/floof/");
 
     var embed = new discord.RichEmbed()
+
         .setColor(mainColor)
         .setTitle("**Vosje** :fox:")
         .setImage(fox.body.image);

@@ -8,9 +8,11 @@ module.exports.run = async (bot, message, args) => {
     const user = message.mentions.users.first() || message.author;
 
     const avatarEmbed = new discord.RichEmbed()
+
         .setColor(mainColor)
         .setAuthor(`${user.username}#${user.discriminator}`)
         .setImage(user.avatarURL);
+
     message.channel.send(avatarEmbed);
 
 }

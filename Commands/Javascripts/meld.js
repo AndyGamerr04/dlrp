@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor(mainColor)
 
-        .setDescription(`📣 **Nieuwe mededeling @everyone **\n\n${announce}`)
+        .setDescription(`**Nieuwe mededeling @everyone **\n\n${announce}`)
 
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 

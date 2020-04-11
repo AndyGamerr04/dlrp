@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (!args[0]) {
 
-        var err = new Discord.RichEmbed()
+        var err = new discord.RichEmbed()
 
             .setColor("0x333333")
             .addField(`**Er is iets fout gegaan! 😕**`, "*Geen Idee meegegeven, gelieve een idee mee te geven.*");

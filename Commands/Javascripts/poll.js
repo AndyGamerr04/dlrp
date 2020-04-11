@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#33ff00")
 
-        .setTitle(`**\n${idee}\n**`)
+        .setTitle(`${idee}\n`)
 
         .setFooter(`${user.username}#${user.discriminator}`, `${user.avatarURL}`);
 

@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
         var err = new discord.RichEmbed()
 
-            .setColor("0x333333")
+            .setColor("2C2F33")
             .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
 
         return message.channel.send(err).then(msg => msg.delete(5000));

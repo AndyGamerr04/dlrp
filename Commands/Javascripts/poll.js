@@ -12,10 +12,10 @@ module.exports.run = async (bot, message, args) => {
 
         var err = new discord.RichEmbed()
 
-            .setColor("0x333333")
-            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen Idee meegegeven, gelieve een idee mee te geven.*");
+            .setColor("2C2F33")
+            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen Idee meegegeven, gelieve een idee mee te geven.\n!poll + bericht*");
 
-        return message.channel.send(err).then(msg => msg.delete(5000));
+        return message.channel.send(err).then(msg => msg.delete(10000));
     }
 
     var ideeEmbed = new discord.RichEmbed()

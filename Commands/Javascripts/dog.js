@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
-import * as variable from 'variables';
+import * as variable from ("../../variables.js");
 
 module.exports.run = async (bot, message, args) => {
 

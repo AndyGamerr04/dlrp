@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
     var ideeEmbed = new discord.RichEmbed()
 
-        .setColor("#33ff00")
+        .setColor("#20232d")
 
         .setAuthor(`${message.author} wilt dat ${idee}`, `${user.avatarURL}`)
 

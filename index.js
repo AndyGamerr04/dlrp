@@ -4,50 +4,59 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./Commands/cmd/", (err, files) => {
+fs.readdir("./Commands/Javascripts/", (err, files) => {
+
   if (err) console.log(err);
+
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
   if (jsFiles.length <= 0) {
+
     console.log("script not found!");
     return;
+
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Commands/cmd/${f}`);
 
+    var fileGet = require(`./Commands/Javascripts/${f}`);
     bot.commands.set(fileGet.help.name, fileGet);
 
   });
 
 });
 
-/*fs.readdir("./Temp/", (err, files) => {
+/*
+fs.readdir("./Commands/Errors/", (err, files) => {
+
   if (err) console.log(err);
+
   var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
   if (jsFiles.length <= 0) {
+
     console.log("script not found!");
     return;
+
   }
 
   jsFiles.forEach((f, i) => {
-    var fileGet = require(`./Temp/${f}`);
 
+    var fileGet = require(`./Commands/Errors//${f}`);
     bot.commands.set(fileGet.help.name, fileGet);
 
   });
 
-});*/
-
+});
+*/
 
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
-
   bot.user.setActivity("Limburg Roleplay", { type: "playing" });
   //bot.user.setPresence({ game: { name: 'With depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
 
 });
-
 
 bot.on('guildMemberAdd', member => {
 
@@ -55,7 +64,6 @@ bot.on('guildMemberAdd', member => {
   member.addRole(role)
 
 });
-
 
 bot.on("message", async message => {
 

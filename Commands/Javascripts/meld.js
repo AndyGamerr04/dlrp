@@ -1,22 +1,18 @@
 const discord = require("discord.js");
-const moment = require("moment");
 const botConfig = require("../../botconfig.json");
 var mainColor = botConfig.mainColor;
-var serverName = botConfig.serverName;
 
 module.exports.run = async (bot, message, args) => {
 
     //if (!message.member.roles.find(r => r.name === "Staff")) {
-
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
         var err = new discord.RichEmbed()
 
             .setColor("0x333333")
-            .addField("**Error**", "*You don't have permission.*");
+            .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
 
         return message.channel.send(err).then(msg => msg.delete(5000));
-
     }
 
     message.delete();
@@ -31,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor(mainColor)
 
-        .setDescription(`${serverName} **Mededeling | @everyone **\n\n${announce}`)
+        .setDescription(`📣 **Nieuwe mededeling @everyone **\n\n${announce}`)
 
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 

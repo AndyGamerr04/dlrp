@@ -6,7 +6,17 @@ module.exports.run = async (bot, message, args) => {
 
     var user = message.author;
 
-    if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
+    //if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
+
+    if (!args[0]) {
+
+        var err = new Discord.RichEmbed()
+
+            .setColor("0x333333")
+            .addField(`**Er is iets fout gegaan! 😕**`, "*Geen Idee meegegeven, gelieve een idee mee te geven.*");
+
+        return message.channel.send(err).then(msg => msg.delete(5000));
+    }
 
     var ideeEmbed = new discord.RichEmbed()
 

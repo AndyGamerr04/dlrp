@@ -50,7 +50,7 @@ fs.readdir("./Commands/Errors/", (err, files) => {
 });
 */
 
-
+/*
 fs.readdir("./Commands/Test/", (err, files) => {
 
   if (err) console.log(err);
@@ -72,7 +72,7 @@ fs.readdir("./Commands/Test/", (err, files) => {
   });
 
 });
-
+*/
 
 
 bot.on("ready", async () => {

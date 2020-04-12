@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("45bb8a")
 
         //.setAuthor(`${user.username} heeft een poll gemaakt om`, `${user.avatarURL}`)
-        .setAuthor(`${user.username} heeft een poll gemaakt om`)
+        .setAuthor(`${user.username} heeft een poll gemaakt.`)
 
         .setDescription(`\n${idee}\n`)
 

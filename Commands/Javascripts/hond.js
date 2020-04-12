@@ -21,7 +21,17 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`Uffff`)
         .setImage(dog.body.url);
 
-    message.channel.send(embed);
+    message.channel.send(embed).then(msg => msg.delete(7000)).then(message => {
+
+        message.react('698550599733608489')
+
+            //.then(() => message.react('698550597888245770'))
+            //.then(() => message.react('698550597816680498'))
+            .catch(() => console.error('Een van de emoji reageerde niet.'));
+
+    });
+
+    message.delete();
 
 }
 

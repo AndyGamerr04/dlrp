@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`Meawww`)
         .setImage(cat.body.file);
 
-    message.channel.send(embed).then(message => {
+    message.channel.send(embed).then(msg => msg.delete(7000)).then(message => {
 
         message.react('698550599733608489')
 
@@ -30,6 +30,8 @@ module.exports.run = async (bot, message, args) => {
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });
+
+    message.delete();
 
 }
 

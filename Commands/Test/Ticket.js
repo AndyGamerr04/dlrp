@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    const categoryId = "498092615351271425";
+    const categoryId = "694892954845970563";
 
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
@@ -13,9 +13,15 @@ module.exports.run = async (bot, message, args) => {
 
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
 
-            message.channel.send("Je hebt al een ticket aangemaakt");
+            var err = new discord.RichEmbed()
+
+                .setColor("2C2F33")
+                .addField("**Er is iets fout gegaan! 😕**", "*Kan het kanaal niet vinden*");
+
 
             bool = true;
+
+            return message.channel.send(err).then(msg => msg.delete(7000));
 
         }
 

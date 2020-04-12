@@ -1,8 +1,5 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
-const botConfig = require("../../botconfig.json");
-
-var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
@@ -20,11 +17,19 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
 
-        .setColor(mainColor)
-        .setTitle("**kat** :cat:")
+        .setColor("2C2F33")
+        .setDescription(`:CatHeartEyes: Meawww`)
         .setImage(cat.body.file);
 
-    message.channel.send(embed);
+    message.channel.send(embed).then(message => {
+
+        message.react('698550599733608489')
+
+            //.then(() => message.react('698550597888245770'))
+            //.then(() => message.react('698550597816680498'))
+            .catch(() => console.error('Een van de emoji reageerde niet.'));
+
+    });
 
 }
 

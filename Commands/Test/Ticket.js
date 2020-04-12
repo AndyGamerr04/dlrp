@@ -13,15 +13,15 @@ module.exports.run = async (bot, message, args) => {
 
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
 
-            var err = new discord.RichEmbed()
+            var err1 = new discord.RichEmbed()
 
                 .setColor("2C2F33")
-                .addField("**Er is iets fout gegaan! 😕**", "*Kan het kanaal niet vinden*");
+                .addField("**Er is iets fout gegaan! 😕**", "*Je hebt al een ticket aangemaakt*");
 
 
             bool = true;
 
-            return message.channel.send(err).then(msg => msg.delete(7000));
+            return message.channel.send(err1).then(msg => msg.delete(7000));
 
         }
 
@@ -48,12 +48,23 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription("Zet hier je vraag/bericht");
 
             settedParent.send(embedParent);
+
         }).catch(err => {
-            message.channel.send("Er is iets fout gelopen.");
+            var err2 = new discord.RichEmbed()
+
+                .setColor("2C2F33")
+                .addField("**Er is iets fout gegaan! 😕**", "*Probeer het opnieuw*");
+
+            return message.channel.send(err2).then(msg => msg.delete(7000));
         });
 
     }).catch(err => {
-        message.channel.send("Er is iets fout gelopen.");
+        var err3 = new discord.RichEmbed()
+
+            .setColor("2C2F33")
+            .addField("**Er is iets fout gegaan! 😕**", "*Probeer het opnieuw*");
+
+        return message.channel.send(err3).then(msg => msg.delete(7000));
     });
 
 }

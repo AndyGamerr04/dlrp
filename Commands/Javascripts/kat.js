@@ -21,7 +21,9 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`Meawww`)
         .setImage(cat.body.file);
 
-    message.channel.send(embed).then(msg => msg.delete(7000)).then(message => {
+    message.channel.send(embed).then(msg => msg.delete(20000));
+
+    message.channel.send(embed).then(message => {
 
         message.react('698550599733608489')
 

@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
-        .setDescription(`:CatHeartEyes: Meawww`)
+        .setDescription(`Meawww`)
         .setImage(cat.body.file);
 
     message.channel.send(embed).then(message => {

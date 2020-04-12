@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.channel.send(embed).then(msg => msg.delete(20000));
 
-    message.channel.send(embed).then(message => {
+    react.send(embed).then(message => {
 
         message.react('698550599733608489')
 

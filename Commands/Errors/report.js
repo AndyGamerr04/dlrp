@@ -4,11 +4,14 @@ const moment = require("moment");
 module.exports.run = async (bot, message, args) => {
 
   if (!args[0]) {
+
     var err = new discord.RichEmbed()
+
       .setColor("D50000")
       .addField("**Error**", `report @Username reason`);
 
     return message.channel.send(err).then(msg => msg.delete(8000));
+
   }
 
   var user = message.guild.member(message.mentions.users.first());
@@ -23,11 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
     .addField("**REPORT**", `${user} *has reported by* ${message.author}`)
     .addField(`***Report Reason***`, reason)
-    .setFooter(
-      `Reported at ${moment
-        .utc(message.createdAt)
-        .format("DD MMM YYYY, HH:mm:ss")}`
-    )
+    .setFooter(`Reported at ${moment.utc(message.createdAt).format("DD MMM YYYY, HH:mm:ss")}`)
     .setColor("#ff0000");
 
   var reportChannel = message.guild.channels.find("name", "📁report-log");

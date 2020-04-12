@@ -50,6 +50,31 @@ fs.readdir("./Commands/Errors/", (err, files) => {
 });
 */
 
+
+fs.readdir("./Commands/Test/", (err, files) => {
+
+  if (err) console.log(err);
+
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+  if (jsFiles.length <= 0) {
+
+    console.log("script not found!");
+    return;
+
+  }
+
+  jsFiles.forEach((f, i) => {
+
+    var fileGet = require(`./Commands/Test//${f}`);
+    bot.commands.set(fileGet.help.name, fileGet);
+
+  });
+
+});
+
+
+
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);

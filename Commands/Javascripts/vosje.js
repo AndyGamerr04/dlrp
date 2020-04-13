@@ -8,18 +8,11 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    while (fox.body.url.endsWith(".webm") || fox.body.url.endsWith(".mp4")) {
-
-        fox = await superAgent
-            .get("https://randomfox.ca/floof/");
-
-    }
-
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
-        .setDescription(`Woofff`)
-        .setImage(fox.body.url);
+        .setDescription(`Floofy`)
+        .setImage(fox.body.image);
 
     message.channel.send(embed).then(message => {
 
@@ -30,7 +23,6 @@ module.exports.run = async (bot, message, args) => {
     });
 
     message.delete();
-
 }
 
 module.exports.help = {

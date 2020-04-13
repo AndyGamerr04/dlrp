@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
       .setColor("45bb8a")
 
-      .setDescription(`**${message.author.username}** ***vraagt*****:** ${question}\n**${bot.user.username}** ***beantwoorden*****:** ${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
+      .setDescription(`**${message.author.username}** ***vraagt***:${question}\n**${bot.user.username}** ***beantwoorden***: ${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
 
       .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.');
 

@@ -21,14 +21,10 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`Meowww`)
         .setImage(cat.body.file);
 
-    message.channel.send(embed).then(msg => msg.delete(20000));
-
-    message.channel.then(message => {
+    message.channel.send(embed).then(message => {
 
         message.react('698550599733608489')
-
-            //.then(() => message.react('698550597888245770'))
-            //.then(() => message.react('698550597816680498'))
+            .then(() => message.delete(7000))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });

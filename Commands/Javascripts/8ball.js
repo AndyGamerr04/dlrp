@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     var err = new discord.RichEmbed()
 
       .setColor("2C2F33")
-      .addField(`**Er is iets fout gegaan! 😕**`, "Voer een vraag in die u wilt beantwoorden.\n!8ball + bericht");
+      .addField(`**Er is iets fout gegaan! 😕**`, "Voer een vraag in die u wilt beantwoorden.  |  !8ball + vraag");
 
     return message.channel.send(err).then(msg => msg.delete(7000));
 
@@ -27,9 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
       .addField(`${message.author.username} vraagt`, `**${question}**`)
 
-      .addField(`${bot.user.username} antwoord`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**`)
-
-      .setThumbnail('https://i.imgur.com/vhgWQMm.png')
+      .addField(`${bot.user.username} antwoord`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**\n`)
 
       .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.');
 
@@ -40,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
     var errb = new Discord.RichEmbed()
 
       .setColor("2C2F33")
-      .addField(`**Er is iets fout gegaan! 😕**`, "Ik kon dat niet lezen. Probeer opnieuw!");
+      .addField(`**Er is iets fout gegaan! 😕**`, "Ik kon dat niet lezen. Probeer opnieuw!  |  !8ball + vraag");
 
     message.channel.send(errb).then(msg => msg.delete(7000));
 

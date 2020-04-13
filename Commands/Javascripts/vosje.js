@@ -8,6 +8,13 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
+    while (fox.body.file.endsWith(".webm") || fox.body.file.endsWith(".mp4")) {
+
+        fox = await superAgent
+            .get("http://aws.random.cat/meow");
+
+    }
+
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
@@ -17,12 +24,13 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(embed).then(message => {
 
         message.react('698550599733608489')
-            .then(() => message.delete(120000))
+            .then(() => message.delete(600000))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });
 
     message.delete();
+
 }
 
 module.exports.help = {

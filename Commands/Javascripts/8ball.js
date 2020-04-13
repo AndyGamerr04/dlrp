@@ -25,11 +25,11 @@ module.exports.run = async (bot, message, args) => {
 
       .setColor("45bb8a")
 
-      .setDescription(`**${message.author.username}:** ${question}\n\n**${bot.user.username}** ${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
+      .setDescription(`**${message.author.username}** ***vraagt*****:** ${question}\n**${bot.user.username}** ***beantwoorden*****:** ${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
 
       .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.');
 
-    message.channel.send(ball)
+    message.channel.send(ball).then(msg => msg.delete(10000));
 
   } else {
 

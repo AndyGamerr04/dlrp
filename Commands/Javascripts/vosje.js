@@ -8,13 +8,6 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    while (fox.body.file.endsWith(".webm") || fox.body.file.endsWith(".mp4")) {
-
-        fox = await superAgent
-            .get("http://aws.random.cat/meow");
-
-    }
-
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")

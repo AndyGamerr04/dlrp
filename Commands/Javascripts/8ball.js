@@ -29,7 +29,9 @@ module.exports.run = async (bot, message, args) => {
 
       .addField(`${bot.user.username} antwoord`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**`)
 
-      .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.', 'https://i.imgur.com/xFrpP6W.png');
+      .setThumbnail('https://i.imgur.com/xFrpP6W.png')
+
+      .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.', 'https://i.imgur.com/7ENLWWy.png');
 
     message.channel.send(ball).then(msg => msg.delete(100000));
 

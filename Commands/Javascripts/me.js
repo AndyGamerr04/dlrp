@@ -13,10 +13,6 @@ module.exports.run = async (bot, message, args) => {
 
         .setDescription(`**${user.username}**#${user.discriminator}\n\n**Discord account gemaakt op:** ${moment.utc(user.createdAt).format("`DD MMM YYYY`")}\n**De server gejoind op:** ${moment.utc(message.member.joinedAt).format("`DD MMM YYYY`")}`)
 
-        //.addField("**Discord account gemaakt op:**", `${moment.utc(user.createdAt).format("DD MMM YYYY")}`, true)
-
-        //.addField("**De server gejoind op:**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY")}`, true)
-
         .setImage(user.avatarURL)
 
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");

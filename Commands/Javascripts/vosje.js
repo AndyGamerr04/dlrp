@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    while (fox.body.file.endsWith(".webm") || fox.body.file.endsWith(".mp4")) {
+    while (fox.body.url.endsWith(".webm") || fox.body.url.endsWith(".mp4")) {
 
         fox = await superAgent
             .get("https://randomfox.ca/floof/");
@@ -18,8 +18,8 @@ module.exports.run = async (bot, message, args) => {
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
-        .setDescription(`Floofy`)
-        .setImage(fox.body.image);
+        .setDescription(`Woofff`)
+        .setImage(fox.body.url);
 
     message.channel.send(embed).then(message => {
 

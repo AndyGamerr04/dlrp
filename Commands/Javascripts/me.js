@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("2C2F33")
 
-        .setDescription(`**${user.username}**#${user.discriminator}\n\nDiscord account gemaakt op: ${moment.utc(user.createdAt).format("DD MMM YYYY")}\n\nDe server gejoind op: ${moment.utc(message.member.joinedAt).format("DD MMM YYYY")}`)
+        .setDescription(`**${user.username}**#${user.discriminator}\n\n**Discord account gemaakt op:** ${moment.utc(user.createdAt).format("`DD MMM YYYY`")}\n\n**De server gejoind op:** ${moment.utc(message.member.joinedAt).format("`DD MMM YYYY`")}`)
 
         //.addField("**Discord account gemaakt op:**", `${moment.utc(user.createdAt).format("DD MMM YYYY")}`, true)
 

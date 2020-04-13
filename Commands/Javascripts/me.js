@@ -11,11 +11,11 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("2C2F33")
 
-        .setDescription(`**${user.username}#**${user.discriminator}`)
+        .setDescription(`**${user.username}**#${user.discriminator}\n\nDiscord account gemaakt op: ${moment.utc(user.createdAt).format("DD MMM YYYY")}\n\nDe server gejoind op: ${moment.utc(message.member.joinedAt).format("DD MMM YYYY")}`)
 
-        .addField("**Discord account gemaakt op:**", `${moment.utc(user.createdAt).format("DD MMM YYYY")}`, true)
+        //.addField("**Discord account gemaakt op:**", `${moment.utc(user.createdAt).format("DD MMM YYYY")}`, true)
 
-        .addField("**De server gejoind op:**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY")}`, true)
+        //.addField("**De server gejoind op:**", `${moment.utc(message.member.joinedAt).format("DD MMM YYYY")}`, true)
 
         .setImage(user.avatarURL)
 

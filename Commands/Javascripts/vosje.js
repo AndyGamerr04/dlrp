@@ -3,23 +3,23 @@ const superAgent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
 
-    var cat;
+    var fox;
 
-    cat = await superAgent
-        .get("http://aws.random.cat/meow");
+    fox = await superAgent
+        .get("https://randomfox.ca/floof/");
 
     while (cat.body.file.endsWith(".webm") || cat.body.file.endsWith(".mp4")) {
 
         cat = await superAgent
-            .get("http://aws.random.cat/meow");
+            .get("https://randomfox.ca/floof/");
 
     }
 
     var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
-        .setDescription(`Meowww`)
-        .setImage(cat.body.file);
+        .setDescription(`Floofy`)
+        .setImage(fox.body.image);
 
     message.channel.send(embed).then(message => {
 
@@ -34,5 +34,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "kat"
+    name: "vosje"
 }

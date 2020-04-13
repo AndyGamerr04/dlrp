@@ -23,13 +23,13 @@ module.exports.run = async (bot, message, args) => {
 
     var ball = new discord.RichEmbed()
 
-      .setColor("45bb8a")
+      .setColor("2C2F33")
 
-      .addField(`${message.author.username} vraagt:`, `**${question}**`)
+      .addField(`${message.author.username} vraagt`, `**${question}**`)
 
-      .addField(`${bot.user.username} antwoord:`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**`)
+      .addField(`${bot.user.username} antwoord`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**`)
 
-      .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.');
+      .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.', 'https://i.imgur.com/xFrpP6W.png');
 
     message.channel.send(ball).then(msg => msg.delete(100000));
 

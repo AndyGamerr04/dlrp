@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     var ball = new discord.RichEmbed()
 
       .setColor("45bb8a")
-      .setDescription(`**${message.author.username}:** ${question}\n${guild.name} ${fortunes[Math.floor(Math.random() * fortunes.length)]}`);
+      .setDescription(`**${message.author.username}:** ${question}\n${bot.user.username} ${fortunes[Math.floor(Math.random() * fortunes.length)]}`);
 
     message.channel.send(ball)
 

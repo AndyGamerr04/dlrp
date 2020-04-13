@@ -8,9 +8,9 @@ module.exports.run = async (bot, message, args) => {
     fox = await superAgent
         .get("https://randomfox.ca/floof/");
 
-    while (cat.body.file.endsWith(".webm") || cat.body.file.endsWith(".mp4")) {
+    while (fox.body.file.endsWith(".webm") || fox.body.file.endsWith(".mp4")) {
 
-        cat = await superAgent
+        fox = await superAgent
             .get("https://randomfox.ca/floof/");
 
     }

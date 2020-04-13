@@ -25,13 +25,13 @@ module.exports.run = async (bot, message, args) => {
 
       .setColor("45bb8a")
 
-      .addField(`**${message.author.username} vraagt:**`, `${question}`)
+      .addField(`${message.author.username} vraagt:`, `**${question}**`)
 
-      .addField(`**${bot.user.username} antwoord:**`, `${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
+      .addField(`${bot.user.username} antwoord:`, `**${fortunes[Math.floor(Math.random() * fortunes.length)]}**`)
 
       .setFooter('!8ball + vraag  |  om een vraag te beantwoorden.');
 
-    message.channel.send(ball).then(msg => msg.delete(10000));
+    message.channel.send(ball).then(msg => msg.delete(100000));
 
   } else {
 

@@ -4,6 +4,8 @@ var fortunes = ["Ja!", "Nee!", "Kan zijn!"];
 
 module.exports.run = async (bot, message, args) => {
 
+  message.delete();
+
   var question = args.join(" ");
 
   if (!args[0]) {
@@ -22,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     var ball = new discord.RichEmbed()
 
       .setColor("45bb8a")
-      .setDescription(`${question}\n${fortunes[Math.floor(Math.random() * fortunes.length)]}`);
+      .setDescription(`${message.author.username}: ${question}\n\n${guild.username}: ${fortunes[Math.floor(Math.random() * fortunes.length)]}`);
 
     message.channel.send(ball)
 

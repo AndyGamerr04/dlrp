@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./src/Javascripts/", (err, files) => {
+fs.readdir("./Src/Javascripts/", (err, files) => {
 
   if (err) console.log(err);
 
@@ -19,7 +19,7 @@ fs.readdir("./src/Javascripts/", (err, files) => {
 
   jsFiles.forEach((f, i) => {
 
-    var fileGet = require(`./src/Javascripts/${f}`);
+    var fileGet = require(`./Src/Javascripts/${f}`);
     bot.commands.set(fileGet.help.name, fileGet);
 
   });

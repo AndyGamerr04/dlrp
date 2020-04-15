@@ -1,7 +1,7 @@
 {
   "name": "andy_bot",
   "version": "1.0.2",
-  "description": "",
+  "description": "test",
   "main": "index.js",
   "scripts": {
     "start": "nodemon"
@@ -15,10 +15,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
     "node-fetch": "^2.6.0",
-    "opusscript": "0.0.6",
-    "superagent": "^5.0.5",
-    "yt-search": "^0.4.1",
-    "ytdl-core": "^0.29.2"
+    "superagent": "^5.0.5"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"

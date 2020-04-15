@@ -6,8 +6,6 @@ module.exports.run = async (bot, message, args) => {
 
     const botEmbed = new discord.RichEmbed()
 
-        .title("Niet Klaar.")
-
         .setColor("2C2F33")
 
         .addField("Commando's", "`!poll` - maak een poll\n`!hond` - Een foto van een hond\n`!kat` - Een foto van een kat\n`!vosje` - Een foto van een vosje\n`!me` - informatie over jouw")

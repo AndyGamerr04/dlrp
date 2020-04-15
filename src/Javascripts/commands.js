@@ -6,14 +6,16 @@ module.exports.run = async (bot, message, args) => {
 
     const botEmbed = new discord.RichEmbed()
 
+        .title("Niet Klaar.")
+
         .setColor("2C2F33")
 
-        .addField("Help opties", "`!commands` - commando's lijst\n!link` - /")
+        .addField("Commando's", "`!poll` - maak een poll\n`!hond` - Een foto van een hond\n`!kat` - Een foto van een kat\n`!vosje` - Een foto van een vosje\n`!me` - informatie over jouw")
 
     return message.channel.send(botEmbed).then(msg => msg.delete(50000));
 
 }
 
 module.exports.help = {
-    name: "help"
+    name: "commands"
 }

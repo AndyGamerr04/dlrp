@@ -1,8 +1,3 @@
 {
-    "prefix": "!",
-    "mainColor": "#5594ff",
-    "groenColor": "#15ff00",
-    "errColor": "#ffa600",
-    "errMessage": "**Something went wrong! 😕**",
-    "serverName": "**Limburg Roleplay**"
+    "prefix": "!"
 }

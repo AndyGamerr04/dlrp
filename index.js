@@ -78,7 +78,7 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online!`);
   bot.user.setActivity("Limburg Roleplay", { type: "playing" });
-  //bot.user.setPresence({ game: { name: 'With depression', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
+  //bot.user.setPresence({ game: { name: 'Live streamen met', type: "streaming", url: "https://www.twitch.tv/relaxbeats" } });
 
 });
 

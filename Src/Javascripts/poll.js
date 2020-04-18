@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setFooter('!poll + bericht  |  om jouw idee met de mensen te delen.');
 
-    var ideeChannel = message.guild.channels.find(`name`, "🧩poll-suggestie");
+    var ideeChannel = message.guild.channels.find(`name`, "poll-suggestie");
 
     //if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
     if (!ideeChannel) {

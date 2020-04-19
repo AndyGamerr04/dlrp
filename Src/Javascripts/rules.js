@@ -22,10 +22,10 @@ module.exports.run = async (bot, message, args) => {
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
 
     return message.channel.send(botEmbed).then(message => {
-        message.react('👍').then(() => message.react('👎'));
+        message.react('👍');
 
         const filter = (reaction, user) => {
-            return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+            return ['😕'].includes(reaction.emoji.name) && user.id === message.author.id;
         };
 
         message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
@@ -39,10 +39,6 @@ module.exports.run = async (bot, message, args) => {
                     message.reply('you reacted with a thumbs down.');
                 }
             })
-
-            .catch(collected => {
-                message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
-            });
 
     });
 

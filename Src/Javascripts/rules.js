@@ -21,11 +21,15 @@ module.exports.run = async (bot, message, args) => {
 
         .setTitle('HometownRP Reglement')
 
-        .setAuthor(`Hometown Roleplay`, `${bot.user.avatarURL}`)
+        .setURL('https://discord.gg/q8fB9QF')
 
-        .setDescription("_")
+        .setAuthor(`Het overtreden van regels leid tot staffzaak`)
 
-        .setFooter('Het overtreden van regels leid tot staffzaak');
+        .setDescription("\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n")
+
+        .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
+
+        .setFooter('Copyright HometownRP 2020 ©');
 
     message.channel.send(embed)
 

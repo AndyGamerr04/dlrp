@@ -15,33 +15,47 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(err).then(msg => msg.delete(7000));
     }
 
-    const botEmbed = new discord.RichEmbed()
+    var embed = new discord.RichEmbed()
 
         .setColor("2C2F33")
 
-        .addField('**RECHTLIJNEN** - *Het overtreden van regels leid tot staffzaak.*', '• Als een andere burger regels overtreedt, geeft dit je niet het recht om zelf een regel te overtreden.\n\n• Niet alle regels kunnen vermeld worden, dus gebruik je verstand bij het spel en vermeld ze even.\n\n• Racisme, onverdraagzaamheid, antisemitisme en elke andere vorm van intimidatie wordt niet getolereerd.\n\n• Als een restart is geprogrammeerd, zijn de regels nog steeds van toepassing!\n\n• U moet een geldige reden hebben om met personeel te contracteren!')
+        .setDescription("**RECHTLIJNEN** - *Het overtreden van regels leid tot staffzaak.*\n\n• Als een andere burger regels overtreedt, geeft dit je niet het recht om zelf een regel te overtreden.\n\n• Niet alle regels kunnen vermeld worden, dus gebruik je verstand bij het spel en vermeld ze even.\n\n• Racisme, onverdraagzaamheid, antisemitisme en elke andere vorm van intimidatie wordt niet getolereerd.\n\n• Als een restart is geprogrammeerd, zijn de regels nog steeds van toepassing!\n\n• U moet een geldige reden hebben om met personeel te contracteren!")
 
-        .addBlankField()
+    message.channel.send(embed)
 
-        .addField('**ALGEMEEN GEDRAG**', "• Burger's moeten elke situatie in een RP-scenario spelen.\n\n• Burger's die worden vermoord en een respawn vragen, moeten hun RP-scenario waarin ze overleden zijn vergeten.\n\n• NLR (terug naar de plaats waar je stierf) - Je moet 5 minuten wachten tot de RP-scenario voorbij is.\n\n• Burgers kunnen geen informatie buiten het roleplay gebruiken om hun RP-scenario in het spel te beinvloeden.\n\n• Uitzondering: Burgers mogen alleen uit karakter gaan als een medewerker je vraagt om de situatie uit te leggen.")
+    var embed2 = new discord.RichEmbed()
 
-        .addBlankField()
+        .setColor("2C2F33")
 
-        .addField('**ROLE PLAYING**', '• Burgers moeten hun leven waarderen.\n\n• Voorbeeld: als een burger een pistool tegen zijn hoofd heeft, moet hij dienovereenkomstig handelen.\n\n• Burgers moeten medische blessures altijd correct in roleplay spelen.\n\n• Burgers kunnen niet opzettelijk iets doen voor de politie dat normaal niet zou gebeuren. Dit staat bekend als "Cop Baiting".\n\n• Burgers kunnen geen onbeheerde politie/medic voertuigen stelen die geparkeerd zijn in de stad.\n\n• Burgers kunnen een appartement niet betreden om de roleplay te omzeilen.')
+        .setDescription("**ALGEMEEN GEDRAG**\n\n• Burger's moeten elke situatie in een RP-scenario spelen.\n\n• Burger's die worden vermoord en een respawn vragen, moeten hun RP-scenario waarin ze overleden zijn vergeten.\n\n• NLR (terug naar de plaats waar je stierf) - Je moet 5 minuten wachten tot de RP-scenario voorbij is.\n\n• Burgers kunnen geen informatie buiten het roleplay gebruiken om hun RP-scenario in het spel te beinvloeden.\n\n• Uitzondering: Burgers mogen alleen uit karakter gaan als een medewerker je vraagt om de situatie uit te leggen.")
 
-        .addBlankField()
+    message.channel.send(embed2)
 
-        .addField('**MISBRUIK EN HACKEN**', '• Geen bugs misbruiken of exploiteren.\n\n• Burgers kunnen niet hacken of scripten. (met behulp van software van derden, injectors, enz.).\n\n• Burgers die een exploit melden volgens de juiste procedures, worden ingame beloond.')
 
-        .addBlankField()
+    var embed3 = new discord.RichEmbed()
 
-        .addField('**RDM/VDM** - *Vermoorden of aanvallen zonder roleplay.*', '• Geen zwaar wapen uittrekken als iemand je gewapend in de gaten houdt.\n\n• Geen RDM (Random Death Match) - Iemand zonder reden vermoorden.\n\n• Geen VDM (Random Vehicle Deathmatch) - Iemand dood rijden met een auto.\n\n• Geen SpawnKill - Iemand vermoorden op het moment dat ze verbinden.\n\n• Geen FreeShot - Iemand zonder reden schieten.')
+        .setColor("2C2F33")
 
-        .addBlankField()
+        .setDescription("**ROLE PLAYING**\n\n• Burgers moeten hun leven waarderen.\n\n• Voorbeeld: als een burger een pistool tegen zijn hoofd heeft, moet hij dienovereenkomstig handelen.\n\n• Burgers moeten medische blessures altijd correct in roleplay spelen.\n\n• Burgers kunnen niet opzettelijk iets doen voor de politie dat normaal niet zou gebeuren. Dit staat bekend als (Cop Baiting).\n\n• Burgers kunnen geen onbeheerde politie/medic voertuigen stelen die geparkeerd zijn in de stad.\n\n• Burgers kunnen een appartement niet betreden om de roleplay te omzeilen.")
 
-        .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
+    message.channel.send(embed3)
 
-    return message.channel.send(botEmbed);
+    var embed4 = new discord.RichEmbed()
+
+        .setColor("2C2F33")
+
+        .setDescription("**MISBRUIK EN HACKEN**\n\n• Geen bugs misbruiken of exploiteren.\n\n• Burgers kunnen niet hacken of scripten. (met behulp van software van derden, injectors, enz.).\n\n• Burgers die een exploit melden volgens de juiste procedures, worden ingame beloond.")
+
+    message.channel.send(embed4)
+
+
+    var embed5 = new discord.RichEmbed()
+
+        .setColor("2C2F33")
+
+        .setDescription("**RDM/VDM** - *Vermoorden of aanvallen zonder roleplay.*\n\n• Geen zwaar wapen uittrekken als iemand je gewapend in de gaten houdt.\n\n• Geen RDM (Random Death Match) - Iemand zonder reden vermoorden.\n\n• Geen VDM (Random Vehicle Deathmatch) - Iemand dood rijden met een auto.\n\n• Geen SpawnKill - Iemand vermoorden op het moment dat ze verbinden.\n\n• Geen FreeShot - Iemand zonder reden schieten.")
+
+    message.channel.send(embed5)
 
 }
 

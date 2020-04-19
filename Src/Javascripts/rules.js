@@ -15,20 +15,38 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(err).then(msg => msg.delete(7000));
     }
 
-    const user = message.mentions.users.first() || message.author;
-
     const botEmbed = new discord.RichEmbed()
 
         .setColor("2C2F33")
 
-        .setImage(user.avatarURL)
-
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
 
-    return message.channel.send(botEmbed).then(msg => msg.delete(50000));
+    return message.channel.send(botEmbed).then(message => {
+        message.react('👍');
 
+        const filter = (reaction, user) => {
+            return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
+        };
 
-}
+        message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+
+            .then(collected => {
+                const reaction = collected.first();
+
+                if (reaction.emoji.name === '👍') {
+                    message.reply('you reacted with a thumbs up.');
+                } else {
+                    message.reply('you reacted with a thumbs down.');
+                }
+            })
+
+            .catch(collected => {
+                message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
+            });
+
+    });
+
+};
 
 module.exports.help = {
     name: "rules"

@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
 
     return message.channel.send(botEmbed).then(message => {
-        message.react('👍');
+        message.react('👍').then(() => message.react('👎'));
 
         const filter = (reaction, user) => {
             return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;

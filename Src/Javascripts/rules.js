@@ -4,6 +4,8 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
+    var role = member.guild.roles.find('name', 'Agree')
+
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
         var err = new discord.RichEmbed()
@@ -24,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
         message.react('698550597414289499')
 
-            .then(() => message.react('698550597888245770'))
+            .then(() => member.addRole(role))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });

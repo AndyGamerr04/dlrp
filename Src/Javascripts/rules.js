@@ -21,15 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
 
-    return message.channel.send(botEmbed).then(message => {
-        message.react('👍');
-
-        if (reaction.emoji.name === '👍') {
-            message.reply('you reacted with a thumbs up.');
-        } else {
-            message.reply('you reacted with a thumbs down.');
-        }
-    });
+    return message.channel.send(botEmbed);
 
 };
 

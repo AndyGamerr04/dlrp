@@ -21,8 +21,6 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("2C2F33")
 
-        .setDescription(`**${user.username}**#${user.discriminator}\n\n**Discord account gemaakt op:** ${moment.utc(user.createdAt).format("`DD MMM YYYY`")}\n**De server gejoind op:** ${moment.utc(message.member.joinedAt).format("`DD MMM YYYY`")}`)
-
         .setImage(user.avatarURL)
 
         .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
@@ -33,5 +31,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "meld"
+    name: "rules"
 }

@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, member, args) => {
 
     message.delete();
 
-    var role = member.guild.roles.find('name', 'Agree')
+    var role = member.guild.role.find('name', 'Agree')
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 

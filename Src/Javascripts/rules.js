@@ -20,9 +20,6 @@ module.exports.run = async (bot, message, args) => {
 
         .setDescription(`\nrules\n`)
 
-    message.channel.send(embed)
-
-
     message.channel.send(embed).then(message => {
 
         message.react('698550597414289499')

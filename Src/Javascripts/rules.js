@@ -19,15 +19,15 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#00ff11")
 
-        .setAuthor('Het overtreden van regels leid tot staffzaak')
+        //.setAuthor('Het overtreden van regels leid tot staffzaak')
 
         .setTitle('HometownRP Reglement')
 
         .setURL('https://discord.gg/q8fB9QF')
 
-        //.setThumbnail('https://i.imgur.com/IBpr3Ow.png')
+        .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
 
-        .setDescription('**Zwaar wapen**\nGeen zwaar wapen uittrekken als iemand je gewapend in de gaten houdt.\n\n**RDM**\nGeen RDM (Random Death Match) - Iemand zonder reden vermoorden.\n\n**VDM**\nGeen VDM (Random Vehicle Deathmatch) - Iemand dood rijden met een auto.\n\n**SpawnKill**\nGeen SpawnKill - Iemand vermoorden op het moment dat ze verbinden.\n\n**FreeShot**\nGeen FreeShot - Iemand zonder reden schieten.')
+        .setDescription('**Zwaar wapen**\nGeen zwaar wapen uittrekken als iemand je gewapend in de gaten houdt.\n\n**Geen RDM**\n(Random Death Match) Iemand zonder reden vermoorden.\n\n**Geen VDM**\n(Random Vehicle Deathmatch) Iemand dood rijden met een auto.\n\n**Geen SpawnKill**\nIemand vermoorden op het moment dat ze verbinden.\n\n**Geen FreeShot**\nIemand zonder reden schieten.')
 
         .setFooter('Copyright HometownRP 2020 ©');
 

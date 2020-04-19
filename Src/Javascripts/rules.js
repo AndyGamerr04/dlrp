@@ -1,11 +1,10 @@
 const discord = require("discord.js");
 
-module.exports.run = async (bot, message, member, args) => {
+module.exports.run = async (bot, message, args) => {
 
     message.delete();
 
-    var role = message.guild.roles.find('name', 'Agree')
-
+    //if (!message.member.roles.find(r => r.name === "Staff")) {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
         var err = new discord.RichEmbed()
@@ -16,23 +15,23 @@ module.exports.run = async (bot, message, member, args) => {
         return message.channel.send(err).then(msg => msg.delete(7000));
     }
 
-    var embed = new discord.RichEmbed()
+    const user = message.mentions.users.first() || message.author;
 
-        .setColor("45bb8a")
+    const botEmbed = new discord.RichEmbed()
 
-        .setDescription(`\nrules\n`)
+        .setColor("2C2F33")
 
-    message.channel.send(embed).then(message => {
+        .setDescription(`**${user.username}**#${user.discriminator}\n\n**Discord account gemaakt op:** ${moment.utc(user.createdAt).format("`DD MMM YYYY`")}\n**De server gejoind op:** ${moment.utc(message.member.joinedAt).format("`DD MMM YYYY`")}`)
 
-        message.react('698550597414289499')
+        .setImage(user.avatarURL)
 
-            .then(() => member.addRole(role))
-            .catch(() => console.error('Een van de emoji reageerde niet.'));
+        .setFooter("!me + @naam  |  om jouw profiel met de mensen te delen.");
 
-    });
+    return message.channel.send(botEmbed).then(msg => msg.delete(50000));
+
 
 }
 
 module.exports.help = {
-    name: "rules"
+    name: "meld"
 }

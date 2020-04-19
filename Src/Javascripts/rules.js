@@ -29,14 +29,18 @@ module.exports.run = async (bot, message, args) => {
 
     var embed2 = new discord.RichEmbed()
 
+        .setTitle('**RDM/VDM** - *Vermoorden of aanvallen zonder roleplay.*')
+
         .setColor("#00ff11")
 
-        .setDescription('**Zwaar wapen**\nWapen uittrekken als iemand je gewapend in de gaten houdt.\n\n**Geen RDM**\n(Random Death Match) Iemand zonder reden vermoorden.\n\n**Geen VDM**\n(Random Vehicle Deathmatch) Iemand dood rijden met een auto.\n\n**Geen SpawnKill**\nIemand vermoorden op het moment dat ze verbinden.\n\n**Geen FreeShot**\nIemand zonder reden schieten.')
+        .setDescription('**Zwaar wapen**\nGeen zwaar wapen Wapen uittrekken als iemand je gewapend in de gaten houdt.\n\n**Geen RDM**\n(Random Death Match) Iemand zonder reden vermoorden.\n\n**Geen VDM**\n(Random Vehicle Deathmatch) Iemand dood rijden met een auto.\n\n**Geen SpawnKill**\nIemand vermoorden op het moment dat ze verbinden.\n\n**Geen FreeShot**\nIemand zonder reden schieten.')
 
     message.channel.send(embed2)
 
 
     var embed3 = new discord.RichEmbed()
+
+        .setTitle('**RDM/VDM** - *Vermoorden of aanvallen zonder roleplay.*')
 
         .setColor("#00ff11")
 

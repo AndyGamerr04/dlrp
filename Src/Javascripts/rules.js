@@ -19,15 +19,17 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#00ff11")
 
+        .setAuthor('Het overtreden van regels leid tot staffzaak')
+
         .setTitle('HometownRP Reglement')
 
         .setURL('https://discord.gg/q8fB9QF')
 
-        .setDescription("\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n______________________________________\n")
-
         .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
 
-        .setFooter('Het overtreden van regels leid tot staffzaak | Copyright HometownRP 2020 ©');
+        .setDescription('Geen zwaar wapen uittrekken als iemand je gewapend in de gaten houdt. **Geen RDM (Random Death Match)** - Iemand zonder reden vermoorden. **Geen VDM (Random Vehicle Deathmatch)** - Iemand dood rijden met een auto. **Geen SpawnKill** - Iemand vermoorden op het moment dat ze verbinden. **Geen FreeShot** - Iemand zonder reden schieten.')
+
+        .setFooter('Copyright HometownRP 2020 ©');
 
     message.channel.send(embed)
 

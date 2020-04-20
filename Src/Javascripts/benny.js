@@ -38,6 +38,7 @@ module.exports.run = async (bot, message, args) => {
         merk: args[2] || "No content specified",
         nummerplaat: args[3] || "No content specified",
         prijs: args[4] || "No content specified",
+        beschrijving: args[5] || "Geen beschrijving"
 
     }
 
@@ -45,24 +46,23 @@ module.exports.run = async (bot, message, args) => {
 
     var announcementEmbed = new discord.RichEmbed()
 
-        .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
-
         .setColor("#194576")
 
-        //.setThumbnail('SERVER LOGO')
+        .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
+
+        .setDescription(`${options.beschrijving}`)
+
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
         .addField('Koper', `**${options.koper}**`, true)
         .addField('Verkoper', `**${options.verkoper}**`, true)
-        .addBlankField()
+        .addField('\u200b', '\u200b', false)
         .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
         .addField('Merk', `**${options.merk}**`, true)
         .addField('Prijs', `**${options.prijs}€**`, true)
 
     //.setImage('https://i.imgur.com/dwLTNyt.png')
-
     //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
-
     //.setFooter(`Van ${user.username}#${user.discriminator}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");

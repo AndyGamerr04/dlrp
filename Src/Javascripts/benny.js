@@ -22,9 +22,8 @@ module.exports.run = async (bot, message, args) => {
 
         var useMesagge = new discord.RichEmbed()
 
-            .setTitle("Use:")
-            .setColor("ef7f1b")
-            .setDescription(`!bc **TITLE** ${splitser} **MESSAGE** ${splitser} **COLOR** *#ef7f1b* ${splitser} **CHANNEL**`);
+            .setColor("2C2F33")
+            .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **NEMMERPLAAT** ${splitser} **PRIJS**`);
 
         return message.channel.send(useMesagge).then(msg => msg.delete(20000));
 
@@ -34,14 +33,12 @@ module.exports.run = async (bot, message, args) => {
 
     var options = {
 
-        verkoper: args[0] || "Notification",
+        verkoper: args[0] || "No content specified",
         koper: args[1] || "No content specified",
+        nummerplaat: args[3] || "No content specified",
         prijs: args[2] || "No content specified",
-        nummerplaat: args[3] || "No content specified"
 
     }
-
-    var announcer = message.author;
 
     const user = message.mentions.users.first() || message.author;
 
@@ -51,11 +48,14 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#ffc32d")
 
-        .setDescription(`**Naam van de verkoper:** ${options.verkoper} \n\n**Naam van de koper:** ${options.koper} \n\n ${options.prijs}\n\n ${options.nummerplaat} `)
+        .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
-        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`)
+        .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
+
+        .setFooter(`Van ${user.username}#${user.discriminator}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");
+
     if (!announcementChannel) return message.channel.send("Invalid Channel");
 
     announcementChannel.send(announcementEmbed);

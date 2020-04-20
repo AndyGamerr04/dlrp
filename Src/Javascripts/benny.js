@@ -35,8 +35,9 @@ module.exports.run = async (bot, message, args) => {
 
         verkoper: args[0] || "No content specified",
         koper: args[1] || "No content specified",
-        nummerplaat: args[2] || "No content specified",
-        prijs: args[3] || "No content specified",
+        merk: args[2] || "No content specified",
+        nummerplaat: args[3] || "No content specified",
+        prijs: args[4] || "No content specified",
 
     }
 
@@ -52,11 +53,12 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
         .addField('Koper:', `**${options.koper}**`, true)
-        .addField('Nummerplaat:', `**${options.nummerplaat}**`, true)
-        .addField('Prijs:', `**${options.prijs}€**`, true)
+        .addField('Nummerplaat:', `**${options.nummerplaat}**`, false)
+        .addField('Merk:', `**${options.merk}**`, true)
+        .addField('Prijs:', `**${options.prijs}€**`, false)
         .addField('Verkoper:', `**${options.verkoper}**`, true)
 
-        .setImage('https://i.imgur.com/dwLTNyt.png')
+    //.setImage('https://i.imgur.com/dwLTNyt.png')
 
     //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 

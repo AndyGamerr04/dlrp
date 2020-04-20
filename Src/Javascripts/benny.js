@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
         merk: args[2] || "No content specified",
         nummerplaat: args[3] || "No content specified",
         prijs: args[4] || "No content specified",
-        beschrijving: args[5] || "Geen beschrijving"
+        beschrijving: args[5] || "Geen beschrijving... "
 
     }
 
@@ -48,9 +48,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#194576")
 
-        .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
+        .setTitle("**Benny's Original** **•**MOTORWORKS**•**")
 
-        .setDescription(`**Verkoper:** ${options.verkoper}\n\n**Koper:**${options.koper}`)
+        .setDescription(`**Verkoper:** ${options.verkoper}\n**Koper:**${options.koper}\n`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 

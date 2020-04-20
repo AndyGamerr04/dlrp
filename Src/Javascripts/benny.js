@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
 
-        .setDescription(`**Verkoper:** ${options.verkoper}\n**Koper:**${options.koper}`)
+        .setDescription(`**Verkoper:** ${options.verkoper}\n\n**Koper:**${options.koper}`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
@@ -59,12 +59,6 @@ module.exports.run = async (bot, message, args) => {
         .addField('Prijs', `**${options.prijs}€**`, true)
 
         .setFooter(`${options.beschrijving}`)
-
-    //.addField('Koper', `**${options.koper}**`, true)
-    //.addField('Verkoper', `**${options.verkoper}**`, true)
-    //.setImage('https://i.imgur.com/dwLTNyt.png')
-    //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
-    //.setFooter(`Van ${user.username}#${user.discriminator}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");
 

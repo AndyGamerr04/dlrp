@@ -48,9 +48,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#194576")
 
-        .setTitle("**Benny's Original** **•**MOTORWORKS**•**")
+        .setTitle("**Benny's Original**  **•**MOTORWORKS**•**")
 
-        .setDescription(`**Verkoper:** ${options.verkoper}\n**Koper:**${options.koper}\n`)
+        .setDescription(`Verkoper **${options.verkoper}**\nKoper **${options.koper}**\n\n`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 

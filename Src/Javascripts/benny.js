@@ -49,12 +49,13 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#194576")
 
         //.setThumbnail('https://i.imgur.com/LwPKsSo.png')
+        .setThumbnail('https://i.imgur.com/HSp2nyn.jpg')
         //.setImage('https://i.imgur.com/LwPKsSo.png')
-        .setImage('https://i.imgur.com/HSp2nyn.jpg')
+        //.setImage('https://i.imgur.com/HSp2nyn.jpg')
 
         .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 
-        .setFooter(`Van ${user.username}#${user.discriminator}`)
+    //.setFooter(`Van ${user.username}#${user.discriminator}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");
 

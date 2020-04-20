@@ -54,11 +54,12 @@ module.exports.run = async (bot, message, args) => {
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
-        .addField('Koper', `**${options.koper}**`, true)
-        .addField('Verkoper', `**${options.verkoper}**`, true)
-        .addField('Nummerplaat', `**${options.nummerplaat}**`, false)
+        .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
         .addField('Merk', `**${options.merk}**`, true)
         .addField('Prijs', `**${options.prijs}€**`, true)
+
+        .addField('Koper', `**${options.koper}**`, true)
+        .addField('Verkoper', `**${options.verkoper}**`, true)
 
     //.setImage('https://i.imgur.com/dwLTNyt.png')
     //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)

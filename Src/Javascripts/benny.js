@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setTitle("**Benny's Original**  **•**MOTORWORKS**•**")
 
-        .setDescription(`Verkoper **${options.verkoper}**\nKoper **${options.koper}**\n\n`)
+        .setDescription(`Verkoper: **${options.verkoper}**\nKoper: **${options.koper}**\n\n\n`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 

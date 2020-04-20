@@ -6,10 +6,11 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.roles.find(r => r.name === "Benny's Original")) {
 
         var err = new discord.RichEmbed()
-            .setColor("0x333333")
-            .addField("**Error**", "*You don't have permission.*");
 
-        return message.channel.send(err).then(msg => msg.delete(5000));
+            .setColor("2C2F33")
+            .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
+
+        return message.channel.send(err).then(msg => msg.delete(4000));
 
     }
 
@@ -20,6 +21,7 @@ module.exports.run = async (bot, message, args) => {
     if (args[0] == null) {
 
         var useMesagge = new discord.RichEmbed()
+
             .setTitle("Use:")
             .setColor("ef7f1b")
             .setDescription(`!bc **TITLE** ${splitser} **MESSAGE** ${splitser} **COLOR** *#ef7f1b* ${splitser} **CHANNEL**`);
@@ -32,20 +34,26 @@ module.exports.run = async (bot, message, args) => {
 
     var options = {
 
-        title: args[0] || "Notification",
-        bericht: args[1] || "No content specified",
+        verkoper: args[0] || "Notification",
+        koper: args[1] || "No content specified",
         prijs: args[2] || "No content specified",
+        nummerplaat: args[3] || "No content specified"
 
     }
 
     var announcer = message.author;
 
-    var announcementEmbed = new discord.RichEmbed()
-        .setTitle("Message:")
-        .setColor(options.kleur)
-        .setDescription(`From ${announcer} \n\n ${options.title} \n\n ${options.bericht} \n\n ${options.prijs} `)
-        .setTimestamp();
+    const user = message.mentions.users.first() || message.author;
 
+    var announcementEmbed = new discord.RichEmbed()
+
+        .setTitle("Benny's Original")
+
+        .setColor("#ffc32d")
+
+        .setDescription(`**Naam van de verkoper:** ${options.verkoper} \n\n**Naam van de koper:** ${options.koper} \n\n ${options.prijs}\n\n ${options.nummerplaat} `)
+
+        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");
     if (!announcementChannel) return message.channel.send("Invalid Channel");

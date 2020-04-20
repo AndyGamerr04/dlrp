@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor("2C2F33")
             .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **NUMMERPLAAT** ${splitser} **PRIJS** ${splitser} **BESCHRIJVING**`);
 
-        return message.channel.send(useMesagge).then(msg => msg.delete(20000));
+        return message.channel.send(useMesagge).then(msg => msg.delete(25000));
 
     }
 
@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
 
     var announcementEmbed = new discord.RichEmbed()
 
-        .setColor("#194576")
+        .setColor("#8c2226")
 
         .setTitle("**Benny's Original**  **•**MOTORWORKS**•**")
 

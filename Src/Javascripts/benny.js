@@ -49,11 +49,12 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#194576")
 
         //.setThumbnail('SERVER LOGO')
+        .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
-        .addField('koper', `**${options.koper}**`, true)
-        .addField('Nummerplaat', `${options.nummerplaat}`, true)
-        .addField('Prijs', `**${options.prijs}€**`, true)
-        .addField('verkoper', `**${options.verkoper}**`, true)
+        .addField('Koper:', `**${options.koper}**`, true)
+        .addField('Nummerplaat:', `**${options.nummerplaat}**`, true)
+        .addField('Prijs:', `**${options.prijs}€**`, true)
+        .addField('Verkoper:', `**${options.verkoper}**`, true)
 
         .setImage('https://i.imgur.com/dwLTNyt.png')
 

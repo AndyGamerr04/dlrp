@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
         var useMesagge = new discord.RichEmbed()
 
             .setColor("2C2F33")
-            .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **NEMMERPLAAT** ${splitser} **PRIJS**`);
+            .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **NUMMERPLAAT** ${splitser} **PRIJS** ${splitser} **BESCHRIJVING**`);
 
         return message.channel.send(useMesagge).then(msg => msg.delete(20000));
 
@@ -41,8 +41,6 @@ module.exports.run = async (bot, message, args) => {
         beschrijving: args[5] || "Geen beschrijving... "
 
     }
-
-    const user = message.mentions.users.first() || message.author;
 
     var announcementEmbed = new discord.RichEmbed()
 

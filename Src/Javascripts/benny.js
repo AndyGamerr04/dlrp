@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#194576")
 
         //.setImage('https://i.imgur.com/LwPKsSo.png')
-        .setImage('https://i.imgur.com/rOkVu0r.png')
+        .setImage('https://i.imgur.com/UjHuuQS.png')
 
         .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 

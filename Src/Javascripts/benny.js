@@ -56,8 +56,7 @@ module.exports.run = async (bot, message, args) => {
 
         .addField('Koper', `**${options.koper}**`, true)
         .addField('Verkoper', `**${options.verkoper}**`, true)
-        .addField('\u200b', '\u200b', false)
-        .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
+        .addField('Nummerplaat', `**${options.nummerplaat}**`, false)
         .addField('Merk', `**${options.merk}**`, true)
         .addField('Prijs', `**${options.prijs}€**`, true)
 

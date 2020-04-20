@@ -35,8 +35,8 @@ module.exports.run = async (bot, message, args) => {
 
         verkoper: args[0] || "No content specified",
         koper: args[1] || "No content specified",
-        nummerplaat: args[3] || "No content specified",
-        prijs: args[2] || "No content specified",
+        nummerplaat: args[2] || "No content specified",
+        prijs: args[3] || "No content specified",
 
     }
 
@@ -48,7 +48,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#ffc32d")
 
-        .setThumbnail('https://i.imgur.com/LwPKsSo.png')
+        //.setThumbnail('https://i.imgur.com/LwPKsSo.png')
+        .setImage('https://i.imgur.com/LwPKsSo.png')
+
 
         .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 

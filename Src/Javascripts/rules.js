@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setURL('https://discord.gg/q8fB9QF')
 
-        .setDescription('>>> **Waarschuwingen**\n\n3 waarschuwingen is 1 dag ban.\n4 waarschuwingen is 1 week ban.\n5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
+        .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
 
         .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
 

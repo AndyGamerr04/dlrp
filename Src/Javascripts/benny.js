@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
 
     var announcementEmbed = new discord.RichEmbed()
 
-        .setTitle("**Benny's Original MOTORWORKS**")
+        .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
 
         .setColor("#194576")
 
@@ -57,7 +57,7 @@ module.exports.run = async (bot, message, args) => {
         .addBlankField()
         .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
         .addField('Merk', `**${options.merk}**`, true)
-        .addField('Prijs', `**${options.prijs}€**`, false)
+        .addField('Prijs', `**${options.prijs}€**`, true)
 
     //.setImage('https://i.imgur.com/dwLTNyt.png')
 

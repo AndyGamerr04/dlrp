@@ -50,13 +50,15 @@ module.exports.run = async (bot, message, args) => {
 
         .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
 
-        .setDescription(`**Verkoper:** ${options.verkoper} - **Koper:**${options.koper}\n\n${options.beschrijving}`)
+        .setDescription(`**Verkoper:** ${options.verkoper}\n**Koper:**${options.koper}`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
         .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
         .addField('Merk', `**${options.merk}**`, true)
         .addField('Prijs', `**${options.prijs}€**`, true)
+
+        .setFooter(`${options.beschrijving}`)
 
     //.addField('Koper', `**${options.koper}**`, true)
     //.addField('Verkoper', `**${options.verkoper}**`, true)

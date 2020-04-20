@@ -48,10 +48,8 @@ module.exports.run = async (bot, message, args) => {
 
         .setColor("#194576")
 
-        //.setThumbnail('https://i.imgur.com/LwPKsSo.png')
-        .setThumbnail('https://i.imgur.com/HSp2nyn.jpg')
         //.setImage('https://i.imgur.com/LwPKsSo.png')
-        //.setImage('https://i.imgur.com/HSp2nyn.jpg')
+        .setImage('https://i.imgur.com/BXRnhXT.png')
 
         .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 

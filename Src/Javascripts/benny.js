@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
         .addField('Nummerplaat', `**${options.nummerplaat}**`, true)
-        .addField('Merk', `**${options.merk}**`, true)
+        .addField('Merk', `**${options.merk}**`, false)
         .addField('Prijs', `**${options.prijs}€**`, true)
 
         .setFooter(`${options.beschrijving}`)

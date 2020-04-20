@@ -50,14 +50,14 @@ module.exports.run = async (bot, message, args) => {
 
         //.setThumbnail('SERVER LOGO')
 
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
+        .addField('koper', `**${options.koper}**`, true)
+        .addField('Nummerplaat', `${options.nummerplaat}`, true)
+        .addField('Prijs', `**${options.prijs}€**`, true)
+        .addField('verkoper', `**${options.verkoper}**`, true)
 
         .setImage('https://i.imgur.com/dwLTNyt.png')
 
-        .setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
+    //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
 
     //.setFooter(`Van ${user.username}#${user.discriminator}`)
 

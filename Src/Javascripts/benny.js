@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setTitle("**Benny's Original**  **•** MOTORWORKS **•**")
 
-        .setDescription(`${options.beschrijving}`)
+        .setDescription(`**Verkoper:** ${options.verkoper} - **Koper:**${options.koper}\n\n${options.beschrijving}`)
 
         .setThumbnail('https://i.imgur.com/LwPKsSo.png')
 
@@ -58,9 +58,8 @@ module.exports.run = async (bot, message, args) => {
         .addField('Merk', `**${options.merk}**`, true)
         .addField('Prijs', `**${options.prijs}€**`, true)
 
-        .addField('Koper', `**${options.koper}**`, true)
-        .addField('Verkoper', `**${options.verkoper}**`, true)
-
+    //.addField('Koper', `**${options.koper}**`, true)
+    //.addField('Verkoper', `**${options.verkoper}**`, true)
     //.setImage('https://i.imgur.com/dwLTNyt.png')
     //.setDescription(`**Naam van de verkoper:** ${options.verkoper}\n\n**Naam van de koper:** ${options.koper}\n\n**Nummerplaat:** ${options.nummerplaat}\n\n**Prijs:** €${options.prijs}`)
     //.setFooter(`Van ${user.username}#${user.discriminator}`)

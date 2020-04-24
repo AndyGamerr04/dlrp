@@ -2,6 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+    message.delete();
 
     if (!message.member.roles.find(r => r.name === "Benny's Original")) {
 
@@ -16,14 +17,12 @@ module.exports.run = async (bot, message, args) => {
 
     var splitser = "//";
 
-    message.delete();
-
     if (args[0] == null) {
 
         var useMesagge = new discord.RichEmbed()
 
             .setColor("2C2F33")
-            .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **NUMMERPLAAT** ${splitser} **PRIJS** ${splitser} **BESCHRIJVING**`);
+            .setDescription(`!va **VERKOPER** ${splitser} **KOPER** ${splitser} **MERK** ${splitser} **NUMMERPLAAT** ${splitser} **PRIJS** ${splitser} **BESCHRIJVING**`);
 
         return message.channel.send(useMesagge).then(msg => msg.delete(25000));
 

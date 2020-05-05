@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
-    var announceChannel = message.guild.channels.find(`name`, "mededelingen");
+    var announceChannel = message.guild.channels.find(`name`, "📍mededelingen");
 
     //if (!announceChannel) return message.guild.send("Kan het kanaal niet vinden");
     if (!announceChannel) {

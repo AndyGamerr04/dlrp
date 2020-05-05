@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setDescription(`**Mededeling @everyone **\n\n${announce}`)
 
-        .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
+    //.setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
     var announceChannel = message.guild.channels.find(`name`, "📍mededelingen");
 

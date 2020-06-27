@@ -32,12 +32,12 @@ module.exports.run = async(bot, message, args) => {
 
     .setColor("005fff")
         .setAuthor('🔵 Mededeling Hometown Roleplay')
-        .setThumbnail('https://i.imgur.com/rNz0Wwj.png')
+        //.setThumbnail('https://i.imgur.com/rNz0Wwj.png')
         .setDescription(`\n\n${announce}\n\n`)
 
 
     //.setFooter('Hometown Roleplay V2 2020', );
-    .setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
+    //.setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
     //'https://i.imgur.com/rNz0Wwj.png'
 
     var announceChannel = message.guild.channels.find(`name`, "mededelingen");

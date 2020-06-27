@@ -31,6 +31,7 @@ module.exports.run = async(bot, message, args) => {
     var announceEmbed = new discord.RichEmbed()
 
     .setColor("005fff")
+        .setThumbnail('https://i.imgur.com/rNz0Wwj.png')
         .setDescription(`**Mededeling | Hometown Roleplay V2**\n\n${announce}\n\n`)
 
 

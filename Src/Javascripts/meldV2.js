@@ -43,7 +43,7 @@ module.exports.run = async(bot, message, args) => {
         .setDescription(`**Mededeling @everyone **\n\n${options.bericht}\n\n${options.link}`)
         //.setImage(`${options.link}`)
 
-    var announcementChannel = message.guild.channels.find(`name`, "verkochte-autos");
+    var announcementChannel = message.guild.channels.find(`name`, "mededelingen");
 
     if (!announcementChannel) return message.channel.send("Invalid Channel");
 

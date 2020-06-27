@@ -33,15 +33,15 @@ module.exports.run = async(bot, message, args) => {
     var options = {
 
         bericht: args[0] || "No content specified",
-        link: args[1] || "No content specified"
+        link: args[1] || "https://i.imgur.com/rNz0Wwj.png"
 
     }
 
     var announcementEmbed = new discord.RichEmbed()
 
-    .setColor("#8c2226")
-        .setDescription(`**Mededeling @everyone **\n\n${options.bericht}\n\n`)
-        //.setImage(`${options.link}`)
+    .setColor("005fff")
+        .setDescription(`**Mededeling Hometown Roleplay V2 Beta2 | @everyone **\n\n${options.bericht}\n\n`)
+        .setImage(`${options.link}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "mededelingen");
 

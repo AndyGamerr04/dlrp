@@ -33,9 +33,11 @@ module.exports.run = async(bot, message, args) => {
     var options = {
 
         bericht: args[0] || "No content specified",
-        link: args[1] || "https://i.imgur.com/rNz0Wwj.png"
+        link: args[1] || ""
 
     }
+
+    //"https://i.imgur.com/rNz0Wwj.png"
 
     var announcementEmbed = new discord.RichEmbed()
 

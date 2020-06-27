@@ -40,7 +40,7 @@ module.exports.run = async(bot, message, args) => {
     var announcementEmbed = new discord.RichEmbed()
 
     .setColor("#8c2226")
-        .setDescription(`**Mededeling @everyone **\n\n${options.bericht}\n\n${options.link}`)
+        .setDescription(`**Mededeling @everyone **\n\n${options.bericht}\n\n`)
         //.setImage(`${options.link}`)
 
     var announcementChannel = message.guild.channels.find(`name`, "mededelingen");

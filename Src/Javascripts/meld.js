@@ -48,7 +48,7 @@ module.exports.run = async(bot, message, args) => {
     var options = {
 
         bericht: args[0] || "Geen inhoud gespecificeerd",
-        link: args[1] || ""
+        link: args[1] || "https://i.imgur.com/rNz0Wwj.png"
 
     }
 

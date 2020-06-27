@@ -31,9 +31,10 @@ module.exports.run = async(bot, message, args) => {
     var announceEmbed = new discord.RichEmbed()
 
     .setColor("#00b9ff")
-        .setDescription(`**Hometown Roleplay Mededeling | @everyone **\n\n${announce}`)
-        .setFooter('HometownRP 2020', 'https://i.imgur.com/rNz0Wwj.png');
+        .setDescription(`**Hometown Roleplay V2 Mededeling**\n\n${announce}\n\n`)
+        .setFooter('Hometown Roleplay V2 2020', );
     //.setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
+    //'https://i.imgur.com/rNz0Wwj.png'
 
     var announceChannel = message.guild.channels.find(`name`, "mededelingen");
 

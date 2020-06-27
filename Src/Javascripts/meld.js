@@ -31,10 +31,9 @@ module.exports.run = async(bot, message, args) => {
     var announceEmbed = new discord.RichEmbed()
 
     .setColor("005fff")
-        .setAuthor('🔵 Mededeling Hometown Roleplay')
-        //.setThumbnail('https://i.imgur.com/rNz0Wwj.png')
-        .setDescription(`\n\n${announce}\n\n`)
-
+        .setAuthor('Mededeling Hometown Roleplay')
+        //.setDescription(`\n\n${announce}\n\n`)
+        .addField(':pauseblue::pauseblue::pauseblue::pauseblue::pauseblue::pauseblue::pauseblue::pauseblue::pauseblue::pauseblue:', '\n\n${announce}\n\n')
 
     //.setFooter('Hometown Roleplay V2 2020', );
     //.setFooter(`Mededeling van ${user.username}#${user.discriminator}`);

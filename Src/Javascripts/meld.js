@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async(bot, message, args) => {
 
     message.delete();
 
@@ -9,9 +9,8 @@ module.exports.run = async (bot, message, args) => {
 
         var err = new discord.RichEmbed()
 
-            .setColor("2C2F33")
+        .setColor("2C2F33")
             .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
-
         return message.channel.send(err).then(msg => msg.delete(7000));
     }
 
@@ -24,18 +23,16 @@ module.exports.run = async (bot, message, args) => {
 
         var err2 = new discord.RichEmbed()
 
-            .setColor("2C2F33")
+        .setColor("2C2F33")
             .addField(`**Er is iets fout gegaan! 😕**`, "*Geen* **Mededeling** *meegegeven, gelieve een idee mee te geven.*  |  !meld + bericht");
-
         return message.channel.send(err2).then(msg => msg.delete(7000));
     }
 
     var announceEmbed = new discord.RichEmbed()
 
-        .setColor("#7289DA")
-
-        .setDescription(`**Mededeling @everyone **\n\n${announce}`)
-
+    .setColor("#00b9ff")
+        .setDescription(`**Hometown Roleplay Mededeling | @everyone **\n\n${announce}`)
+        .setFooter('HometownRP 2020', 'https://i.imgur.com/rNz0Wwj.png');
     //.setFooter(`Mededeling van ${user.username}#${user.discriminator}`);
 
     var announceChannel = message.guild.channels.find(`name`, "mededelingen");
@@ -45,9 +42,8 @@ module.exports.run = async (bot, message, args) => {
 
         var err3 = new discord.RichEmbed()
 
-            .setColor("2C2F33")
+        .setColor("2C2F33")
             .addField("**Er is iets fout gegaan! 😕**", "*Kan het kanaal niet vinden*");
-
         return message.channel.send(err3).then(msg => msg.delete(7000));
     }
 

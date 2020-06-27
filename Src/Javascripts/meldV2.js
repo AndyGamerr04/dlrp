@@ -41,7 +41,7 @@ module.exports.run = async(bot, message, args) => {
 
     .setColor("005fff")
         .setDescription(`**Mededeling Hometown Roleplay V2 Beta2 | @everyone **\n\n${options.bericht}\n\n`)
-        .setImage(`${options.link}`)
+        .setImage(`${options.link}`);
 
     var announcementChannel = message.guild.channels.find(`name`, "mededelingen");
 

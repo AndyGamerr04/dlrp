@@ -3,7 +3,7 @@ const superAgent = require("superagent");
 
 module.exports.run = async(bot, message, args) => {
 
-    message.delete();
+    //message.delete();
 
     if (!message.member.roles.find(r => r.name === "Anime Fan")) {
 

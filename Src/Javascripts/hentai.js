@@ -1,15 +1,15 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async(bot, message, args) => {
 
     message.delete();
 
-    if (!message.member.roles.find(r => r.name === "weebs")) {
+    if (!message.member.roles.find(r => r.name === "Anime Fan")) {
 
         var err = new discord.RichEmbed()
 
-            .setColor("2C2F33")
+        .setColor("2C2F33")
             .addField("**Er is iets fout gegaan! 😕**", "*Je hebt geen toestemming*");
 
         return message.channel.send(err).then(msg => msg.delete(4000));
@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
 
-        .setColor("2C2F33")
+    .setColor("2C2F33")
         .setDescription("**Hentai** :underage:")
         .setImage(hen.body.message);
 
@@ -32,5 +32,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "hentai"
+    name: "hentaixd"
 }

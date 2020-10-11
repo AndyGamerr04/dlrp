@@ -1,15 +1,19 @@
 const discord = require("discord.js");
-const botConfig = require("../../botconfig.json");
-var mainColor = botConfig.mainColor;
 
 module.exports.run = async (bot, message, args) => {
 
-    var serverEmbed = new discord.RichEmbed()
-        .setColor(mainColor)
-        .addField("**Command's**", `!8ball\n!avatart\n!hond\n!info\n!kat\n!love\n!me\n!vosje\n\n\n!announce\n!clear\n!idee\n!report\n`)
-    return message.channel.send(serverEmbed).then(msg => msg.delete(99000));
-};
+    message.delete();
+
+    const botEmbed = new discord.RichEmbed()
+
+        .setColor("2C2F33")
+
+        .addField("Commando's", "`!poll` - maak een poll\n`!hond` - Een foto van een hond\n`!kat` - Een foto van een kat\n`!vosje` - Een foto van een vosje\n`!me` - informatie over jouw")
+
+    return message.channel.send(botEmbed).then(msg => msg.delete(50000));
+
+}
 
 module.exports.help = {
-    name: "cmd"
-};
+    name: "commands"
+}

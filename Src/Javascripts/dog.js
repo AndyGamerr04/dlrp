@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const superAgent = require("superagent");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async(bot, message, args) => {
 
     var dog;
 
@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.RichEmbed()
 
-        .setColor("2C2F33")
+    .setColor("2C2F33")
         .setDescription(`Woofff`)
         .setImage(dog.body.url);
 
@@ -34,5 +34,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "hond"
+    name: "dog"
 }

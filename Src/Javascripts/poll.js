@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
     var ideeEmbed = new discord.RichEmbed()
 
         //.setColor("#2C2F33")
-        .setColor("45bb8a")
+        .setColor("7289da")
 
         //.setAuthor(`${user.username} heeft een poll gemaakt om`, `${user.avatarURL}`)
         .setAuthor(`${user.username} heeft een poll gemaakt.`)
@@ -46,10 +46,9 @@ module.exports.run = async (bot, message, args) => {
 
     ideeChannel.send(ideeEmbed).then(message => {
 
-        message.react('698550597414289499')
+        message.react('773982069096448000')
 
-            .then(() => message.react('698550597888245770'))
-            //.then(() => message.react('698550597816680498'))
+            .then(() => message.react('773982069050703944'))
             .catch(() => console.error('Een van de emoji reageerde niet.'));
 
     });

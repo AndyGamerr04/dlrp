@@ -45,6 +45,8 @@ bot.on('guildMemberAdd', member => {
 
 bot.on("message", async message => {
 
+  const command = args.shift().toLowerCase();
+
   try {
 
     if (message.author.bot) return;
@@ -55,11 +57,8 @@ bot.on("message", async message => {
 
     var messageArrey = message.content.split(" ");
 
-    //var prefix = botConfig.prefix;
-
     var command = messageArrey[0];
 
-    //var arguments = messageArrey.slice(1);
     var arguments = message.content.slice(prefix.length).split(/ +/);
 
     var commands = bot.commands.get(command.slice(prefix.length));
@@ -69,13 +68,5 @@ bot.on("message", async message => {
   } catch (err) { }
 
 });
-
-/*bot.on('message', message => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-
-  const args = message.content.slice(prefix.length).split(/ +/);
-  const command = args.shift().toLowerCase();
-
-})*/
 
 bot.login(process.env.token);

@@ -43,37 +43,39 @@ bot.on('guildMemberAdd', member => {
 
 });
 
-/*bot.on("message", async message => {
+bot.on("message", async message => {
 
-  //try {
+  try {
 
-  if (message.author.bot) return;
+    if (message.author.bot) return;
 
-  if (message.channel.type === "dm") return;
+    if (message.channel.type === "dm") return;
 
-  var messageArrey = message.content.split(" ");
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-  var prefix = botConfig.prefix;
+    var messageArrey = message.content.split(" ");
 
-  var command = messageArrey[0];
+    //var prefix = botConfig.prefix;
 
-  var arguments = messageArrey.slice(1);
+    var command = messageArrey[0];
 
-  var commands = bot.commands.get(command.slice(prefix.length));
+    //var arguments = messageArrey.slice(1);
+    var arguments = message.content.slice(prefix.length).split(/ +/);
 
-  if (command) commands.run(bot, message, arguments);
+    var commands = bot.commands.get(command.slice(prefix.length));
 
-  //} catch (err) { }
+    if (command) commands.run(bot, message, arguments);
 
-});*/
+  } catch (err) { }
 
-bot.on('message', message => {
+});
+
+/*bot.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
-  if (command) commands.run(bot, message, arguments);
 
-});
+})*/
 
 bot.login(process.env.token);

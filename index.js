@@ -1,8 +1,7 @@
 const discord = require("discord.js");
-//const botConfig = require("./botconfig.json");
-const prefix = '!';
 const fs = require("fs");
 const bot = new discord.Client();
+const prefix = '!';
 bot.commands = new discord.Collection();
 
 fs.readdir("./Src/Javascripts/", (err, files) => {
@@ -44,8 +43,6 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on("message", async message => {
-
-  const command = args.shift().toLowerCase();
 
   try {
 

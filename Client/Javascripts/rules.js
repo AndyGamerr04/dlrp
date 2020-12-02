@@ -16,41 +16,44 @@ module.exports.run = async (bot, message, args) => {
     var e1 = new discord.RichEmbed()
         .setColor("#282b30")
         .setTitle('**Welkom bij de officiële Hometown Roleplay 2.0 Discord.**')
+        .setImage('https://cdn.discordapp.com/attachments/727975970296037457/727986078954553414/Rules.png')
         .setDescription("hier onder");
     message.channel.send(e1)
 
     var e2 = new discord.RichEmbed()
         .setColor("#282b30")
-        .setTitle('Relels')
-        .setDescription("- line 1\n- line 1\n- line 2\n- line 4\n- line 5")
-        .setImage('https://cdn.discordapp.com/attachments/727975970296037457/727986078954553414/Rules.png');
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false);
     message.channel.send(e2)
 
     var e3 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false);
     message.channel.send(e3)
 
     var e4 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false);
     message.channel.send(e4)
 
     var e5 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
-        .addField('Inline field title', 'Some value here', true)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false)
+        .addField('Inline field title', 'Some value here', false);
     message.channel.send(e5)
 
 }

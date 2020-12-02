@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-        .setColor("#00000000")
+        .setColor("#424549")
         .setTitle('HometownRP Reglement')
         .setURL('https://discord.gg/q8fB9QF')
         .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')

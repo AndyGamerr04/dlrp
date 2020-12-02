@@ -30,7 +30,7 @@ bot.on("ready", async () => {
 
   //console.log(`${bot.user.username} is online!`);
   //bot.user.setActivity("BLACKPINK", { type: "listening" });
-  bot.user.setActivity("Hometown Roleplayy", { type: "playing" });
+  bot.user.setActivity("Hometown Roleplay 2.0", { type: "playing" });
   //bot.user.setPresence({ game: { name: 'Live streamen met', type: "streaming", url: "https://www.twitch.tv/" } });
 
 });

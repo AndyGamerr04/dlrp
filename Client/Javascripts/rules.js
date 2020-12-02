@@ -22,11 +22,11 @@ module.exports.run = async (bot, message, args) => {
 
     var e2 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', false)
-        .addField('Inline field title', 'Some value here', false)
-        .addField('Inline field title', 'Some value here', false)
-        .addField('Inline field title', 'Some value here', false)
-        .addField('Inline field title', 'Some value here', false);
+        .addField('**Microfoon**', 'Een microfoon is vereist om lid te worden van onze stad.', false)
+        .addField('**OOC (Out of Character)**', 'Out of Character is niet toegestaan.\nVind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
+        .addField('**New Life Rule (Nieuwe levensregel)**', 'Als u dood wordt verklaard door een ambulancier of politie agent kunt u niet terugkeren naar de situatie waarin u betrokken was.\nU bent dan ook verplicht om de roleplay scenario te vergeten.\nEr kan geen wraak actie of dergelijke mogelijk meer zijn, hier is geen uitzondering voor mogelijk.', false)
+        .addField('**Value of Life (Waarderen van leven)**', 'Zodra jij in eerste instantie word bedreigt door middel van wapens ben jij verplicht je leven te waarderen en mee te gaan in de roleplay van je mede-burger.\nAls je je leven niet waardeert en vermoord wordt zal staff er niks aan doen. Ook geen Refunds!\nVind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
+        .addField('**Value of others lives (Het leven van anderen waarderen)**', 'Iedereen moet zijn eigen leven waarderen en die van de mede-burgers. Je gaat nooit niet iemand zomaar vermoorden voor de fun.', false);
     message.channel.send(e2)
 
     var e3 = new discord.RichEmbed()

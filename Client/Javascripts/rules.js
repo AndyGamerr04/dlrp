@@ -10,27 +10,25 @@ module.exports.run = async (bot, message, args) => {
 
             .setColor("2C2F33")
             .addField("Er is iets fout gegaan! 😕", "*Je hebt geen toestemming*");
-
         return message.channel.send(err).then(msg => msg.delete(7000));
     }
 
-    var embed = new discord.RichEmbed()
+    var e1 = new discord.RichEmbed()
         .setColor("#282b30")
-        .setTitle('HometownRP Reglement 1')
-        .setURL('https://discord.gg/q8fB9QF')
-        .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
-        .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
+        .setTitle('**Welkom bij de officiële Hometown Roleplay 2.0 Discord.**')
+        .setDescription("hier onder");
+    message.channel.send(e1)
 
-    message.channel.send(embed)
+    var e2 = new discord.RichEmbed()
+        .setColor("#282b30")
+        .setTitle('Relels')
+        .setImage('https://cdn.discordapp.com/attachments/727975970296037457/727986078954553414/Rules.png');
+    message.channel.send(e2)
 
-    var embed2 = new discord.RichEmbed()
-        .setColor("#1e2124")
-        .setTitle('HometownRP 2')
-        .setURL('https://discord.gg/q8fB9QF')
-        .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
-        .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
-
-    message.channel.send(embed2)
+    var e3 = new discord.RichEmbed()
+        .setColor("#282b30")
+        .setDescription("- line 1\n- line 1\n- line 2\n- line 4\n- line 5\n- line 6\n- line 7\n- line 8\n- line 9\n- line 10\n");
+    message.channel.send(e3)
 
 }
 

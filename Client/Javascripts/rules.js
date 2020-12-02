@@ -22,12 +22,19 @@ module.exports.run = async (bot, message, args) => {
     var e2 = new discord.RichEmbed()
         .setColor("#282b30")
         .setTitle('Relels')
+        .setDescription("- line 1\n- line 1\n- line 2\n- line 4\n- line 5")
         .setImage('https://cdn.discordapp.com/attachments/727975970296037457/727986078954553414/Rules.png');
     message.channel.send(e2)
 
     var e3 = new discord.RichEmbed()
         .setColor("#282b30")
-        .setDescription("- line 1\n- line 1\n- line 2\n- line 4\n- line 5\n- line 6\n- line 7\n- line 8\n- line 9\n- line 10\n");
+        .setDescription("- line 1\n- line 1\n- line 2\n- line 4\n- line 5")
+        .addFields(
+            { name: 'Regular field title', value: 'Some value here' },
+            { name: '\u200B', value: '\u200B' },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+            { name: 'Inline field title', value: 'Some value here', inline: true },
+        );
     message.channel.send(e3)
 
 }

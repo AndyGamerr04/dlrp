@@ -15,13 +15,22 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-        .setColor("#424549")
-        .setTitle('HometownRP Reglement')
+        .setColor("#36393f")
+        .setTitle('HometownRP Reglement 1')
         .setURL('https://discord.gg/q8fB9QF')
         .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
         .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
 
     message.channel.send(embed)
+
+    var embed2 = new discord.RichEmbed()
+        .setColor("#36393e")
+        .setTitle('HometownRP 2')
+        .setURL('https://discord.gg/q8fB9QF')
+        .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
+        .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
+
+    message.channel.send(embed2)
 
 }
 

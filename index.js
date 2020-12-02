@@ -4,7 +4,7 @@ const bot = new discord.Client();
 const prefix = '!';
 bot.commands = new discord.Collection();
 
-fs.readdir("./Src/Javascripts/", (err, files) => {
+fs.readdir("./Client/Javascripts/", (err, files) => {
 
   if (err) console.log(err);
 
@@ -19,7 +19,7 @@ fs.readdir("./Src/Javascripts/", (err, files) => {
 
   jsFiles.forEach((f, i) => {
 
-    var fileGet = require(`./Src/Javascripts/${f}`);
+    var fileGet = require(`./Client/Javascripts/${f}`);
     bot.commands.set(fileGet.help.name, fileGet);
 
   });
@@ -27,12 +27,11 @@ fs.readdir("./Src/Javascripts/", (err, files) => {
 });
 
 bot.on("ready", async () => {
-  //console.log(`${bot.user.username} is online!`);
+  console.log(`${bot.user.username} is online!`);
+  bot.user.setActivity("Hometown Roleplay 2.0", { type: "playing" });
 
   //bot.user.setActivity("BLACKPINK", { type: "listening" });
-  bot.user.setActivity("Hometown Roleplay 2.0", { type: "playing" });
   //bot.user.setPresence({ game: { name: 'Live streamen met', type: "streaming", url: "https://www.twitch.tv/" } });
-
 });
 
 bot.on('guildMemberAdd', member => {

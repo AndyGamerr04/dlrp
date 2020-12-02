@@ -5,7 +5,6 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
 
     if (!message.member.roles.find(r => r.name === "Developer")) {
-        //if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 
         var err = new discord.RichEmbed()
 
@@ -16,15 +15,10 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-
-        .setColor("#00ff11")
-
+        .setColor("#00000000")
         .setTitle('HometownRP Reglement')
-
         .setURL('https://discord.gg/q8fB9QF')
-
         .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
-
         .setThumbnail('https://i.imgur.com/IBpr3Ow.png')
 
     message.channel.send(embed)
@@ -32,5 +26,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "rules"
+    name: "r"
 }

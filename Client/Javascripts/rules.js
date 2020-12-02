@@ -87,43 +87,65 @@ module.exports.run = async (bot, message, args) => {
 
     var e7 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Politie beroven**', 'Het beroven van een politiebureau is niet toegestaan. Een agent beroven van ze wapen of wat dan ook is niet mogelijk. (Eten, drinken of repairkits mogen etc wel beroven worden)', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Valse melding**', 'Een valse melding maken op de ambtenaar naar de locatie te lokken zonder geldige reden.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Commando /assist**', 'Gebruik /assist alleen als het echt nodig is! Misbruiken van het commando kan leiden tot een temp-ban.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Commando /ooc**', 'Gebruik /ooc uitzonderlijk voor het stellen van vragen over de server en game gerelateerde informatie.Roleplay gerelateerde vragen kun je stellen via twitter, sms en/of bellen. Misbruiken van het commando kan leiden tot een temp-ban.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false);
+        .addField('**Breaking character**', 'Het is niet de bedoeling om in roleplay te klagen dat een situatie Fail RP, maak de roleplay af en maak ondertussen een report aan. We raden iedereen aan om NVIDEA te gebruiken zodat je altijd kunt opnamen, zonder bewijs kunnen we niks. ‎', false);
     message.channel.send(e7)
 
     var e8 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Refunds**', 'Mocht je iets kwijtraken en kun je er zelf niks aan doen? Bijvoorbeeld bij een onaangekondigde restart of door een bug. Dan kom je in aanmerking voor een refund, je moet hiervoor een ticket openen via de Discord server. We accepteren alleen refunds als er bewijs is dus we raden iedereen aan om NVIDEA te gebruiken zodat je altijd je gameplay kunt opnemen (van de laatste 20 minuten). Mocht je dan iets kwijtraken kun je gelijk de opname opslaan.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Metagaming**', 'Metagaming is dat je real-life kennis gebruikt om de acties van je personage te bepalen. Dit is natuurlijk niet mogelijk/toegestaan. Als je bijvoorbeeld vast zit in een cel en je hebt geen telefoon of andere communicatie bij je kun niet je vrienden via Discord vragen of ze je kunnen komen redden. ‎', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField("**Onrealistisch scenario's**", "Onrealistische scenario's zijn niet toegestaan. Bijvoorbeeld: gelijk schieten tijdens een overval of zonder reden iemand zijn auto stelen.", false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Alt accounts**', 'Het is verboden alt accounts aan te maken met de intentie het start bedrag over te schrijven naar het account waar normaal op gespeeld wordt.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false);
+        .addField('**Cheaten**', 'We geven iedereen een kans om eerlijk te roleplayen, hackers zijn hier niet welkom. Ook als je hacks hebt gebruikt in andere steden ben ook bij ons niet welkom.', false);
     message.channel.send(e8)
 
     var e9 = new discord.RichEmbed()
         .setColor("#282b30")
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Exploits**', 'Dit wordt in geen enkele vorm gewaardeerd je bent verplicht om bugs te melden in #bug-support . Geen enkele vorm van bug-abuse wordt geaccepteerd. Doe je het wel kan het leiden tot een server ban!', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Stream snipen**', 'Het is niet toegestaan om informatie uit stream te gebruiken, streamers te achtervolgen en lastig te vallen. Dit zal zorgen voor een directe ban.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Stemherkenning**', 'Het is verboden om een speler te herkennen aan zijn/haar stem. Iemand die dus een masker/andere kleding  op heeft en zichzelf onherkenbaar heeft gemaakt kun je niet herkennen aan zijn/haar stem.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false)
+        .addField('**Meewerken**', 'Probeert altijd mee te werken in een scenario, zo maak je de roleplay voor iedereen leuk. Mocht je het ergens niet mee eens zijn, klaag dan pas na het scenario.', false)
         .addBlankField()
-        .addField('Inline field title', 'Some value here', false);
+        .addField('**Veiligheid onderhandelaars**', 'Het gijzelen of neerschieten van onderhandelaars is nooit toegestaan.', false);
     message.channel.send(e9)
 
+    var e10 = new discord.RichEmbed()
+        .setColor("#282b30")
+        .addField('**Bank/juwelier overval**', 'Een bank overvallen is een grote missie, dit heeft voorbereiding nodig. Je bent verplicht om vooraf een realistisch plan te hebben.', false)
+        .addBlankField()
+        .addField('**Vluchten voor de politie**', 'Om te vluchten van de politie heb je een geldige reden nodig. ‘’Ik had geen zin in een boete’’ is geen geldige reden. In het echt vlucht je daarvoor ook niet voor de politie.', false)
+        .addBlankField()
+        .addField('**Criminele organisaties**', 'Criminele organisaties mogen een maximaal ledenaantal hebben van 8 personen.', false)
+        .addBlankField()
+        .addField('**Gedrag criminele organisaties**', 'Opvallend negatief gedrag van criminele organisaties of veel warns kan lijden tot het op opschorten van de criminele organisaties.', false)
+        .addBlankField()
+        .addField('**Ambulance is leidend**', 'Op het moment dat je wordt geholpen door de ambulance is de ambulance leidend in de roleplay. Uiteraard kun je aangeven wat er is, maar de ambulance bepaald dus of je meegaat naar het ziekenhuis en hoe lang bepaalde zaken duren. (Dus ook als iemand doodverklaard wordt)', false)
+        .addField('Fouilleren', 'Fouilleren zonder reden is niet toegestaan. Er moet sprake zijn van een mogelijk incident of een verkeerscontrole. Mocht je als verdachte worden gezien mag de politie altijd fouilleren.', false)
+        .addBlankField()
+        .addField('**Legale banen**', 'Alle legale banen vanuit het uitzendbureau mogen niet overvallen worden.', false);
+    message.channel.send(e10)
+
+    var e11 = new discord.RichEmbed()
+        .setColor("#282b30")
+        .addField('**Straffen:**', '> ● Mondelinge waarschuwingen\n> ● Officiële waarschuwingen\n> ● Ban/kick', false)
+        .addBlankField()
+        .addField('**Waarschuwing systeem:**', '> 2 waarschuwingen is 1 dag ban.\n> 5 waarschuwingen is 1 week ban.\n> 6 waarschuwingen is een permanente ban.\n\n**LET OP!** Hacken of schelden met ziektes leidt tot een permanent ban.', false)
+    message.channel.send(e11)
 }
 
 module.exports.help = {

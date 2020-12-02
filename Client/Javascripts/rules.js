@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var embed = new discord.RichEmbed()
-        .setColor("#36393f")
+        .setColor("#282b30")
         .setTitle('HometownRP Reglement 1')
         .setURL('https://discord.gg/q8fB9QF')
         .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(embed)
 
     var embed2 = new discord.RichEmbed()
-        .setColor("#36393e")
+        .setColor("#1e2124")
         .setTitle('HometownRP 2')
         .setURL('https://discord.gg/q8fB9QF')
         .setDescription('**Waarschuwingen**\n\n> 3 waarschuwingen is 1 dag ban.\n> 4 waarschuwingen is 1 week ban.\n> 5 waarschuwingen is 1 maand ban.\n> 6 waarschuwingen is een permanente ban.\n\n text...')

@@ -14,9 +14,9 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var e1 = new discord.RichEmbed()
-        .setColor("#7289da")
+        .setColor("#93abd3")
         .setTitle('**Hometown Roleplay 2.0**')
-        .setDescription("*Zorg ervoor dat u de onderstaande regels leest.*")
+        .setDescription("*Zorg ervoor dat u de onderstaande regels leest.*\n\n**Waarschuwingen:\n> ● **2 waarschuwingen is 1 dag ban**.\n> ● **5 waarschuwingen is 1 week ban**.\n> ● **6 waarschuwingen is een permanente ban**.\n\n**LET OP!** Hacken of schelden met ziektes leidt tot een permanent ban.")
         .setImage('https://i.imgur.com/hmW0ZHX.png')
     message.channel.send(e1)
 
@@ -140,13 +140,6 @@ module.exports.run = async (bot, message, args) => {
         .addBlankField()
         .addField('**Legale banen**', 'Alle legale banen vanuit het uitzendbureau mogen niet overvallen worden.', false);
     message.channel.send(e10)
-
-    var e11 = new discord.RichEmbed()
-        .setColor("#ff3c3c")
-        .addField('**Straffen:**', '> ● Mondelinge waarschuwingen\n> ● Officiële waarschuwingen\n> ● Ban/kick', false)
-        .addBlankField()
-        .addField('**Waarschuwingen:**', '> ● 2 waarschuwingen is 1 dag ban.\n> ● 5 waarschuwingen is 1 week ban.\n> ● 6 waarschuwingen is een permanente ban.\n\n**LET OP!** Hacken of schelden met ziektes leidt tot een permanent ban.', false)
-    message.channel.send(e11)
 }
 
 module.exports.help = {

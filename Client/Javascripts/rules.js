@@ -16,23 +16,12 @@ module.exports.run = async (bot, message, args) => {
     var e1 = new discord.RichEmbed()
         .setColor("#7289da")
         .setTitle('**Hometown Roleplay 2.0**')
-        .setDescription("hier onder")
+        .setDescription("*Zorg ervoor dat u de onderstaande regels leest.*")
         .setImage('https://i.imgur.com/hmW0ZHX.png')
-
-        .addField('**Microfoon**', 'Een microfoon is vereist om lid te worden van onze stad.', false)
-        .addBlankField()
-        .addField('**OOC (Out of Character)**', 'Out of Character is niet toegestaan.Vind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
-        .addBlankField()
-        .addField('**New Life Rule (Nieuwe levensregel)**', 'Als u dood wordt verklaard door een ambulancier of politie agent kunt u niet terugkeren naar de situatie waarin u betrokken was.U bent dan ook verplicht om de roleplay scenario te vergeten.Er kan geen wraak actie of dergelijke mogelijk meer zijn, hier is geen uitzondering voor mogelijk.', false)
-        .addBlankField()
-        .addField('**Value of Life (Waarderen van leven)**', 'Zodra jij in eerste instantie word bedreigt door middel van wapens ben jij verplicht je leven te waarderen en mee te gaan in de roleplay van je mede-burger.Als je je leven niet waardeert en vermoord wordt zal staff er niks aan doen. Ook geen Refunds!Vind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
-        .addBlankField()
-        .addField('**Value of others lives (Het leven van anderen waarderen)**', 'Iedereen moet zijn eigen leven waarderen en die van de mede-burgers. Je gaat nooit niet iemand zomaar vermoorden voor de fun.', false);
-
     message.channel.send(e1)
 
     var e2 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Microfoon**', 'Een microfoon is vereist om lid te worden van onze stad.', false)
         .addBlankField()
         .addField('**OOC (Out of Character)**', 'Out of Character is niet toegestaan.Vind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
@@ -45,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e2)
 
     var e3 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**AFK**', 'Ga niet AFK voor een periode langer dan 15 minuten anders u zal automatisch gekickt worden. Herhaalde AFK-overtredingen kunnen tot een temp-ban leiden.', false)
         .addBlankField()
         .addField('**Cop Baiting**', 'Copbaiting is niet toegestaan. Probeer niet opzettelijk de aandacht van de politie op u te trekken, door dingen te doen die u normaal niet zou doen met een agent bij u in de buurt.Voorbeeld: In het midden van kruispunten doelbewust uw motor laten draaien, toeteren en opzettelijk verkeersovertredingen maken in de buurt van een politieagent. ', false)
@@ -58,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e3)
 
     var e4 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Verstoren van RP**', 'Opzettelijk een roleplay scenario van een mede-burger willen verpesten kan worden leiden tot een warn of temp-ban.', false)
         .addBlankField()
         .addField('**Combat Loggen**', 'Uitloggen in een roleplay scenario om te voorkomen dat jij niet vermoord of beroofd/gearresteerd wordt is niet toegestaan.Als je dood ben gegaan moet je wachten op een ambulance!Combat Loggen kan leiden tot een temp-ban!', false)
@@ -71,7 +60,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e4)
 
     var e5 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**RDM (Random Death Match)**', 'Zonder een geldige reden een persoon opzettelijk vermoorden zal bestraft worden.Kill on Sight valt onder RDM.', false)
         .addBlankField()
         .addField('**VDM (Random Vehicle Deathmatch)**', 'Als een slachtoffer opzettelijk aan wordt gereden door iemand die harder gaat dan de toegestaande snelheidzal die worden gestraft met een warn of een perm-ban..', false)
@@ -84,7 +73,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e5)
 
     var e6 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Ambtenaar buiten dienst**', 'Een ambtenaar buiten dienst mag geen politie wapens opzich houden deze zullen altijd aan het einde van de dienst opgeborgen worden in de wapenkluis.Dit kan worden bestraft met een mondeling waarschuwing en/of een warn.', false)
         .addBlankField()
         .addField('**Overheidsvoertuigen**', 'Als je geen ambtenaar in dienst bent mag je niet een overheidsvoertuigen besturen.', false)
@@ -97,7 +86,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e6)
 
     var e7 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Politie beroven**', 'Het beroven van een politiebureau is niet toegestaan. Een agent beroven van ze wapen of wat dan ook is niet mogelijk. (Eten, drinken of repairkits mogen etc wel beroven worden)', false)
         .addBlankField()
         .addField('**Valse melding**', 'Een valse melding maken op de ambtenaar naar de locatie te lokken zonder geldige reden.', false)
@@ -110,7 +99,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e7)
 
     var e8 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Refunds**', 'Mocht je iets kwijtraken en kun je er zelf niks aan doen? Bijvoorbeeld bij een onaangekondigde restart of door een bug. Dan kom je in aanmerking voor een refund, je moet hiervoor een ticket openen via de Discord server. We accepteren alleen refunds als er bewijs is dus we raden iedereen aan om NVIDEA te gebruiken zodat je altijd je gameplay kunt opnemen (van de laatste 20 minuten). Mocht je dan iets kwijtraken kun je gelijk de opname opslaan.', false)
         .addBlankField()
         .addField('**Metagaming**', 'Metagaming is dat je real-life kennis gebruikt om de acties van je personage te bepalen. Dit is natuurlijk niet mogelijk/toegestaan. Als je bijvoorbeeld vast zit in een cel en je hebt geen telefoon of andere communicatie bij je kun niet je vrienden via Discord vragen of ze je kunnen komen redden. ‎', false)
@@ -123,7 +112,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e8)
 
     var e9 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Exploits**', 'Dit wordt in geen enkele vorm gewaardeerd je bent verplicht om bugs te melden in #bug-support . Geen enkele vorm van bug-abuse wordt geaccepteerd. Doe je het wel kan het leiden tot een server ban!', false)
         .addBlankField()
         .addField('**Stream snipen**', 'Het is niet toegestaan om informatie uit stream te gebruiken, streamers te achtervolgen en lastig te vallen. Dit zal zorgen voor een directe ban.', false)
@@ -136,7 +125,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(e9)
 
     var e10 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#93abd3")
         .addField('**Bank/juwelier overval**', 'Een bank overvallen is een grote missie, dit heeft voorbereiding nodig. Je bent verplicht om vooraf een realistisch plan te hebben.', false)
         .addBlankField()
         .addField('**Vluchten voor de politie**', 'Om te vluchten van de politie heb je een geldige reden nodig. ‘’Ik had geen zin in een boete’’ is geen geldige reden. In het echt vlucht je daarvoor ook niet voor de politie.', false)

@@ -14,10 +14,10 @@ module.exports.run = async (bot, message, args) => {
     }
 
     var e1 = new discord.RichEmbed()
-        .setColor("#282b30")
-        .setTitle('**Welkom bij de officiële Hometown Roleplay 2.0 Discord.**')
-        .setImage('https://cdn.discordapp.com/attachments/727975970296037457/727986078954553414/Rules.png')
-        .setDescription("hier onder");
+        .setColor("#7289da")
+        .setTitle('**Hometown Roleplay 2.0**')
+        .setDescription("hier onder")
+        .setImage('https://i.imgur.com/hmW0ZHX.png');
     message.channel.send(e1)
 
     var e2 = new discord.RichEmbed()
@@ -135,16 +135,17 @@ module.exports.run = async (bot, message, args) => {
         .addField('**Gedrag criminele organisaties**', 'Opvallend negatief gedrag van criminele organisaties of veel warns kan lijden tot het op opschorten van de criminele organisaties.', false)
         .addBlankField()
         .addField('**Ambulance is leidend**', 'Op het moment dat je wordt geholpen door de ambulance is de ambulance leidend in de roleplay. Uiteraard kun je aangeven wat er is, maar de ambulance bepaald dus of je meegaat naar het ziekenhuis en hoe lang bepaalde zaken duren. (Dus ook als iemand doodverklaard wordt)', false)
+        .addBlankField()
         .addField('Fouilleren', 'Fouilleren zonder reden is niet toegestaan. Er moet sprake zijn van een mogelijk incident of een verkeerscontrole. Mocht je als verdachte worden gezien mag de politie altijd fouilleren.', false)
         .addBlankField()
         .addField('**Legale banen**', 'Alle legale banen vanuit het uitzendbureau mogen niet overvallen worden.', false);
     message.channel.send(e10)
 
     var e11 = new discord.RichEmbed()
-        .setColor("#282b30")
+        .setColor("#ff3c3c")
         .addField('**Straffen:**', '> ● Mondelinge waarschuwingen\n> ● Officiële waarschuwingen\n> ● Ban/kick', false)
         .addBlankField()
-        .addField('**Waarschuwing systeem:**', '> 2 waarschuwingen is 1 dag ban.\n> 5 waarschuwingen is 1 week ban.\n> 6 waarschuwingen is een permanente ban.\n\n**LET OP!** Hacken of schelden met ziektes leidt tot een permanent ban.', false)
+        .addField('**Waarschuwingen:**', '> ● 2 waarschuwingen is 1 dag ban.\n> ● 5 waarschuwingen is 1 week ban.\n> ● 6 waarschuwingen is een permanente ban.\n\n**LET OP!** Hacken of schelden met ziektes leidt tot een permanent ban.', false)
     message.channel.send(e11)
 }
 

@@ -17,7 +17,18 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#7289da")
         .setTitle('**Hometown Roleplay 2.0**')
         .setDescription("hier onder")
-        .setImage('https://i.imgur.com/hmW0ZHX.png');
+        .setImage('https://i.imgur.com/hmW0ZHX.png')
+
+        .addField('**Microfoon**', 'Een microfoon is vereist om lid te worden van onze stad.', false)
+        .addBlankField()
+        .addField('**OOC (Out of Character)**', 'Out of Character is niet toegestaan.Vind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
+        .addBlankField()
+        .addField('**New Life Rule (Nieuwe levensregel)**', 'Als u dood wordt verklaard door een ambulancier of politie agent kunt u niet terugkeren naar de situatie waarin u betrokken was.U bent dan ook verplicht om de roleplay scenario te vergeten.Er kan geen wraak actie of dergelijke mogelijk meer zijn, hier is geen uitzondering voor mogelijk.', false)
+        .addBlankField()
+        .addField('**Value of Life (Waarderen van leven)**', 'Zodra jij in eerste instantie word bedreigt door middel van wapens ben jij verplicht je leven te waarderen en mee te gaan in de roleplay van je mede-burger.Als je je leven niet waardeert en vermoord wordt zal staff er niks aan doen. Ook geen Refunds!Vind jij dat het roleplay scenario niet eerlijk is? Maak het af tot op het einde en zorg dat je clips hebt opgenomen zodat de staff je kan helpen.', false)
+        .addBlankField()
+        .addField('**Value of others lives (Het leven van anderen waarderen)**', 'Iedereen moet zijn eigen leven waarderen en die van de mede-burgers. Je gaat nooit niet iemand zomaar vermoorden voor de fun.', false);
+
     message.channel.send(e1)
 
     var e2 = new discord.RichEmbed()
